@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.portal-home {
+    background: transparent url(../img/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+.portal-home .el-main {
+    flex: .995;
+}
+
+.portal-home .el-footer {
+    height: 48px !important;
+}
+
+.portal-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.portal-home .app-b-servicio {
+    text-align: left;
+    display: inline;
+}
+
+.el-main .container-home{
+      padding: 0 100px;
+      position: relative;
+  }
+  
+.el-main .container-home .app-title{
+    margin: 80px 0 0 0;
+}
+
+    @media (max-width: 768px) {
+        .el-main .container-home {
+            padding: 0 30px;
+    }
+}
+  

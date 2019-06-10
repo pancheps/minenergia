@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.portal-bg-blue {
+    background-image: url(/img/resources/bg-blue2.svg);
+}
+
+.portal-bg-green {
+    background-image: url(/img/resources/bg-green2.svg);
+}
+
+.portal-bg-red {
+    background-image: url(/img/resources/bg-red2.svg);
+}
+
+.portal-bg-yellow {
+    background-image: url(/img/resources/bg-yellow2.svg);
+}
+
+.portal-bg-blue,
+.portal-bg-green,
+.portal-bg-red,
+.portal-bg-yellow {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+.portal-default .el-header .divider {
+    border-color: #d5d5d5;
+}
+
+.portal-default .el-footer {
+    background-color: rgba(180, 180, 180, 0.9);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.portal-default .el-footer .divider {
+    border-color: #c4c4c4;
+}
+
+.portal-default .el-footer .app-footer {
+    border: none;
+    color: #444444;
+}
+
+.portal-default .el-footer .app-footer a {
+    color: #444444;
+}
+
+.portal-default .el-footer .app-footer a:hover {
+    color: #2b2b2b;
+}
+
+@media (max-width: 768px) {
+    .portal-default .el-footer {
+        position: static;
+    }
+    .portal-default .page {
+        padding-bottom: 0;
+    }
+    .portal-bg-blue,
+    .portal-bg-green,
+    .portal-bg-red,
+    .portal-bg-yellow {
+        background-size: cover;
+    }
+}

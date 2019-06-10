@@ -21,38 +21,113 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'endewp' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$endewp_description = get_bloginfo( 'description', 'display' );
-			if ( $endewp_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $endewp_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<div id="__nuxt" class="site">
+		<div id="__layout">
+			<section class="el-container <?php if ( is_front_page() ) :?>portal-home<?php else : ?>portal-default<?php endif; ?> is-vertical">
+				<header id="masthead" class="el-header">
+					<div class="">
+						<nav id="site-navigation" class="main-navigation app-menu">
+							<div class="app-menu__container">
+								<div class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
+									<!---->
+									<!----><span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
+									<?php
+										if ( !is_front_page() ) :
+									?>
+									<div class="app-logo-container">
+										<div class="app-title">
+											<a href="/en/" class="app-logo-link nuxt-link-exact-active nuxt-link-active"><?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), array('30'), '', array( 'class' => 'app-logo-img') ); ?>
+												<div class="app-logo">
+													<div class="app-logo-title">Estado Plurinacional de Bolivia</div>
+													<div class="app-logo-description"><?php bloginfo( 'name' ); ?></div>
+													<div class="app-logo-title">Estado Plurinacional de Bolivia</div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<?php
+										endif;
+									?>
+									<div class="app-b-servicio">
+										<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia at your service</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
+											<ul class="b-servicio-opciones">
+												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-facebook"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-twitter"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-youtube"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Grabación" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-record"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Camara" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-camera"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Teléfono" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-phone"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Correo electrónico" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-link"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Whatsapp" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-whatsapp"></i>
+														<!----></button></li>
+												<li class="b-servicio-item"><button type="button" title="Messenger" class="el-button app-btn__link el-button--text">
+														<!----><i class="icon-messenger"></i>
+														<!----></button></li>
+											</ul>
+										</div>
+									</div>
+									<div class="app-menu__main">
+										<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'endewp' ); ?></button>
+										<?php
+										wp_nav_menu( array(
+											'theme_location' => 'menu-1',
+											'menu_id'        => 'primary-menu',
+											'menu_class'     => 'app-menu__list',
+											'container'      => '',
+										) );
+										?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'endewp' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+										<!--
+										<div class="app-lang el-dropdown">
+											<button type="button" class="el-button app-btn__link el-button--text el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-8893" role="button" tabindex="0">
+												<span><span class="app-lang-text-short">EN </span> <span class="app-lang-text-long">English </span> <i class="el-icon-arrow-down el-icon--right"></i></span>
+											</button>
+											<ul class="el-dropdown-menu el-popper app-lang__submenu" style="display:none;" id="dropdown-menu-8893">
+												<li tabindex="-1" class="el-dropdown-menu__item app-lang__item">
+													<a href="/en" class="nuxt-link-exact-active nuxt-link-active">
+														Español
+													</a></li>
+												<li tabindex="-1" class="el-dropdown-menu__item app-lang__item">
+													<a href="/en" class="nuxt-link-exact-active nuxt-link-active">
+														English
+													</a></li>
+											</ul>
+										</div>
 
-	<div id="content" class="site-content">
+										<div class="app-header__options">
+											<button type="button" class="el-button app-btn__link el-button--text">
+												
+												<span>Login</span>
+											</button>
+										</div>
+
+										<div class="app-header__search">
+											<button type="button" class="el-button app-btn__link el-button--text">
+												<i class="el-icon-search"></i><span><span class="app-header__search-text">Buscar</span></span>
+											</button>
+										</div>
+										-->
+									</div>
+									<div class="app-menu__main-overlay"></div>
+								</div>
+							</div>
+						</nav><!-- #site-navigation -->
+					</div>
+				</header><!-- #masthead -->
+

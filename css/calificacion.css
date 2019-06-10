@@ -1,0 +1,66 @@
+.b-calificacion {
+    padding: 0 10px 0 0;
+    float: right;
+    display: inline-block;
+    position: relative;
+}
+
+.b-calificacion .b-calificacion-title {
+    display: inline-block;
+    margin: 0 2px 0 0;
+}
+
+.b-calificacion .b-icon {
+    background-color: transparent;
+    padding: 0 2px;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.b-calificacion .b-icon [class^="el-icon-"],
+.b-calificacion .b-icon [class*=" el-icon-"] {
+    font-size: 1.3rem;
+    color: #555555;
+}
+
+.b-calificacion .b-icon .el-icon-star-on {
+    display: none;
+}
+
+.b-calificacion .b-icon.active .el-icon-star-on {
+    display: inline;
+}
+
+.b-calificacion .b-icon.active .el-icon-star-off {
+    display: none;
+}
+
+.b-calificacion .el-dialog {
+    line-height: 1;
+}
+
+.portal-home .b-calificacion .b-icon [class^="el-icon-"],
+.portal-home .b-calificacion .b-icon [class*=" el-icon-"] {
+    color: white;
+}
+
+.portal-home .b-calificacion .el-dialog .b-icon [class^="el-icon-"],
+.portal-home .b-calificacion .el-dialog .b-icon [class*=" el-icon-"] {
+    color: #555555;
+}
+
+.b-calificacion-dialog .el-dialog {
+    width: 92%;
+    max-width: 520px;
+}
+
+.row-bg div {
+    display: inline-block;
+}
+
+.row-bg div.b-calificacion {
+    display: inline-block;
+    float: right;
+}

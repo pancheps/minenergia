@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.app-error {
+    padding: 50px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+}
+
+.app-error h2 {
+    font-size: 12rem;
+    margin: 100px 0 10px;
+    color: #024f9b;
+}
+
+.app-error h3 {
+    margin: 0 0 100px 0;
+    font-size: 2rem;
+    color: #bbbbbb;
+}
+
+.app-error .btn-link {
+    text-decoration: none;
+}

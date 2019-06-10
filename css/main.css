@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Sansation;
+    src: url(../fonts/Sansation/Sansation_Light.ttf);
+}
+
+@font-face {
+    font-family: TitilliumText;
+    src: url(../fonts/TitilliumText/TitilliumText-Light.otf);
+}
+
+body {
+    font-family: 'Sansation', sans-serif;
+    font-weight: 300;
+    background-color: #ffffff;
+}
+
+#__nuxt {
+    height: 100vh;
+}
+
+#__layout {
+    height: 100%;
+}
+
+.el-container,
+.el-main,
+.el-footer {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.el-main {
+    padding-top: 0;
+}
+
+.el-alert {
+    margin-bottom: 10px;
+}
+
+.app-logo {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1160px;
+    }
+}
+
+.bg-blue {
+    background: transparent url(/img/resources/bg-blue.svg) no-repeat;
+    background-size: cover;
+}
+
+.bg-green {
+    background: transparent url(/img/resources/bg-green.svg) no-repeat;
+    background-size: cover;
+}
+
+.bg-red {
+    background: transparent url(/img/resources/bg-red.svg) no-repeat;
+    background-size: cover;
+}
+
+.bg-yellow {
+    background: transparent url(/img/resources/bg-yellow.svg) no-repeat;
+    background-size: cover;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'TitilliumText', sans-serif;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.el-notification__content {
+    text-align: left;
+}
+
+.app-white {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.app-gray {
+    padding: 20px;
+    background-color: #f5f5f5;
+}

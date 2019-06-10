@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.app-logo-link {
+    text-decoration: none;
+}
+
+.app-title {
+    margin: 0;
+}
+
+.app-logo {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 0 0 0;
+    font-family: 'TitilliumText', sans-serif;
+}
+
+.app-logo .app-logo-title {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: 100;
+}
+
+.app-logo .app-logo-title:first-child {
+    display: none;
+}
+
+.app-logo .app-logo-description {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+}
+
+.portal-home .el-main .app-logo {
+    line-height: 50px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 300;
+    padding: 0 0 0 10px;
+    border-left: 1px solid #ffffff;
+}
+
+.portal-home .el-main .app-logo .app-logo-title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.portal-home .el-main .app-logo .app-logo-title:first-child {
+    display: block;
+}
+
+.portal-home .el-main .app-logo .app-logo-title:last-child {
+    display: none;
+}
+
+.portal-home .el-main .app-logo .app-logo-description {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+.portal-home .app-header .open-menu .app-logo-title {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: 100;
+    color: #333;
+    margin-top: 11px;
+}
+
+.portal-home .app-header .open-menu .app-logo-description {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+    color: #333;
+}

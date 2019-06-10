@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.app-footer {
+    border-top: 1px solid #eeeeee;
+    line-height: 50px;
+    color: #eeeeee;
+    font-size: .9rem;
+    font-weight: 300;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+}
+
+.app-footer .app-footer-servicio {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 15px;
+}
+
+.app-footer a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.app-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

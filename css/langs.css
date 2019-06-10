@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* Color del tema */
+
+
+/* Ubicación de la fuente, obligatoria */
+
+.app-lang__item {
+    padding: 0;
+}
+
+.app-lang__item a {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.app-lang__item a:hover {
+    color: #024f9b;
+}
+
+.app-lang__submenu {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    transform: translateY(-8px);
+    min-width: 109px;
+}
+
+.app-lang__submenu .el-dropdown-menu__item {
+    background-color: transparent;
+}
+
+.app-lang__submenu .el-dropdown-menu__item:hover {
+    background-color: transparent;
+}
+
+.app-lang__submenu .el-dropdown-menu__item a {
+    background-color: transparent;
+    color: #eeeeee;
+}
+
+.app-lang__submenu .el-dropdown-menu__item a:hover {
+    background-color: transparent;
+    color: #bbbbbb;
+}
+
+.app-lang__submenu .popper__arrow {
+    display: none;
+}
+
+.app-lang-text-short {
+    display: none;
+}

@@ -122,8 +122,20 @@ add_action( 'widgets_init', 'endewp_widgets_init' );
 function endewp_scripts() {
 	wp_enqueue_style( 'endewp-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'endewp-style-normalize', get_template_directory_uri() . '/css/normalize.css');
+	wp_enqueue_style( 'endewp-style-header', get_template_directory_uri() . '/css/header.css');
+	wp_enqueue_style( 'endewp-style-navigation', get_template_directory_uri() . '/css/navigation.css');
+	wp_enqueue_style( 'endewp-style-portalhome', get_template_directory_uri() . '/css/portalhome.css');
+	wp_enqueue_style( 'endewp-style-portalcolors', get_template_directory_uri() . '/css/portalcolors.css');
+	wp_enqueue_style( 'endewp-style-main', get_template_directory_uri() . '/css/main.css');
+	wp_enqueue_style( 'endewp-style-nuxt', get_template_directory_uri() . '/css/nuxt.css');
+	wp_enqueue_style( 'endewp-style-langs', get_template_directory_uri() . '/css/langs.css');
+	wp_enqueue_style( 'endewp-style-servicio', get_template_directory_uri() . '/css/servicio.css');
+	wp_enqueue_style( 'endewp-style-calificacion', get_template_directory_uri() . '/css/calificacion.css');
+	wp_enqueue_style( 'endewp-style-terminos', get_template_directory_uri() . '/css/terminos.css');
+	wp_enqueue_style( 'endewp-style-footer', get_template_directory_uri() . '/css/footer.css');
+	wp_enqueue_style( 'endewp-style-search', get_template_directory_uri() . '/css/search.css');
+	wp_enqueue_style( 'endewp-style-login', get_template_directory_uri() . '/css/login.css');
 
-	wp_enqueue_script( 'endewp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'endewp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
