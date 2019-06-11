@@ -6,19 +6,19 @@
 /* Ubicación de la fuente, obligatoria */
 
 .portal-bg-blue {
-    background-image: url(/img/resources/bg-blue2.svg);
+    background-image: url(../img/resources/bg-blue2.svg);
 }
 
 .portal-bg-green {
-    background-image: url(/img/resources/bg-green2.svg);
+    background-image: url(../img/resources/bg-green2.svg);
 }
 
 .portal-bg-red {
-    background-image: url(/img/resources/bg-red2.svg);
+    background-image: url(../img/resources/bg-red2.svg);
 }
 
 .portal-bg-yellow {
-    background-image: url(/img/resources/bg-yellow2.svg);
+    background-image: url(../img/resources/bg-yellow2.svg);
 }
 
 .portal-bg-blue,
@@ -36,7 +36,6 @@
 
 .portal-default .el-footer {
     background-color: rgba(180, 180, 180, 0.9);
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;

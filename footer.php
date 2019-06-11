@@ -14,10 +14,12 @@
 <footer class="el-footer" style="height:auto;">
 	<div class="app-footer">
 		<div class="row-bg relative el-row is-justify-space-between el-row--flex">
+			<div>
 				<div class="divider ml-0"></div> <a href="/en/contacto" class="">
 					Contact
 				</a>
 				<div class="divider"></div>
+			</div>
 			<div class="b-terminos"><a href="javascript:void(0)" class="b-terminos-link">Términos y condiciones</a>
 				<div class="el-dialog__wrapper b-dialog-terminos" style="display:none;">
 					<div role="dialog" aria-modal="true" aria-label="TERMINOS Y CONDICIONES" class="el-dialog" style="margin-top:15vh;">
@@ -66,7 +68,12 @@
 			</div>
 			<div class="b-calificacion"><span class="b-calificacion-title">
 					Calificación:
-				</span> <button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button><button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button><button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button><button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button><button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
+				</span> 
+				<button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
+				<button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
+				<button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
+				<button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
+				<button type="button" class="b-icon"><i class="el-icon-star-off"></i> <i class="el-icon-star-on"></i></button>
 				<div class="el-dialog__wrapper b-calificacion-dialog" style="display:none;">
 					<div role="dialog" aria-modal="true" aria-label="BOLIVIA A TU SERVICIO" class="el-dialog" style="margin-top:15vh;">
 						<div class="el-dialog__header"><span class="el-dialog__title">BOLIVIA A TU SERVICIO</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div>

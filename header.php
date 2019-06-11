@@ -83,7 +83,7 @@
 										</div>
 									</div>
 									<div class="app-menu__main">
-										<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'endewp' ); ?></button>
+									<button aria-label="Cerrar menú" type="button" class="app-search__close"><i class="el-icon-close"></i></button>
 										<?php
 										wp_nav_menu( array(
 											'theme_location' => 'menu-1',
@@ -92,8 +92,8 @@
 											'container'      => '',
 										) );
 										?>
-
 										<!--
+										<div class="divider app-lang-divider"></div>
 										<div class="app-lang el-dropdown">
 											<button type="button" class="el-button app-btn__link el-button--text el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-8893" role="button" tabindex="0">
 												<span><span class="app-lang-text-short">EN </span> <span class="app-lang-text-long">English </span> <i class="el-icon-arrow-down el-icon--right"></i></span>
@@ -109,14 +109,14 @@
 													</a></li>
 											</ul>
 										</div>
-
+										<div class="divider"></div>
 										<div class="app-header__options">
 											<button type="button" class="el-button app-btn__link el-button--text">
 												
 												<span>Login</span>
 											</button>
 										</div>
-
+										<div class="divider"></div>
 										<div class="app-header__search">
 											<button type="button" class="el-button app-btn__link el-button--text">
 												<i class="el-icon-search"></i><span><span class="app-header__search-text">Buscar</span></span>

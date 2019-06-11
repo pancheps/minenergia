@@ -80,6 +80,7 @@ html {
 
 body {
     margin: 0;
+    background-color: #404040;
 }
 
 
@@ -232,7 +233,6 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
-button,
 input,
 optgroup,
 select,
@@ -253,7 +253,6 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 
-button,
 input {
     /* 1 */
     overflow: visible;
@@ -265,7 +264,6 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
-button,
 select {
     /* 1 */
     text-transform: none;
@@ -276,8 +274,6 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
-button,
-[type="button"],
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
@@ -288,25 +284,12 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
 
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
 
 
 /**
@@ -467,7 +450,6 @@ template {
 --------------------------------------------------------------*/
 
 body,
-button,
 input,
 select,
 optgroup,
@@ -553,12 +535,6 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-    box-sizing: inherit;
-}
 
 body {
     background: #fff;
@@ -621,7 +597,6 @@ table {
 # Forms
 --------------------------------------------------------------*/
 
-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -806,7 +781,7 @@ a:active {
         display: none;
     }
     .main-navigation ul {
-        display: block;
+        display: inline-block;
     }
 }
 

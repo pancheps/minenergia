@@ -1,6 +1,5 @@
 .b-calificacion {
     padding: 0 10px 0 0;
-    float: right;
     display: inline-block;
     position: relative;
 }
@@ -62,5 +61,4 @@
 
 .row-bg div.b-calificacion {
     display: inline-block;
-    float: right;
 }

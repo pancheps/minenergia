@@ -87,22 +87,22 @@ body {
 }
 
 .bg-blue {
-    background: transparent url(/img/resources/bg-blue.svg) no-repeat;
+    background: transparent url(../img/resources/bg-blue.svg) no-repeat;
     background-size: cover;
 }
 
 .bg-green {
-    background: transparent url(/img/resources/bg-green.svg) no-repeat;
+    background: transparent url(../img/resources/bg-green.svg) no-repeat;
     background-size: cover;
 }
 
 .bg-red {
-    background: transparent url(/img/resources/bg-red.svg) no-repeat;
+    background: transparent url(../img/resources/bg-red.svg) no-repeat;
     background-size: cover;
 }
 
 .bg-yellow {
-    background: transparent url(/img/resources/bg-yellow.svg) no-repeat;
+    background: transparent url(../img/resources/bg-yellow.svg) no-repeat;
     background-size: cover;
 }
 
