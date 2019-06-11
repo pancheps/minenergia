@@ -12,7 +12,7 @@
 ?>
 
 <footer class="el-footer" style="height:auto;">
-	<div class="app-footer">
+	<div class="app-footer <?php if ( !is_home()) echo ".app-footer-no-home"; ?>">
 		<div class="row-bg relative el-row is-justify-space-between el-row--flex">
 			<div>
 				<div class="divider ml-0"></div> <a href="/en/contacto" class="">
