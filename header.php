@@ -42,7 +42,7 @@ $currClass = $bgClasses[$classId];
 									?>
 									<div class="app-logo-container">
 										<div class="app-title">
-											<a href="/en/" class="app-logo-link nuxt-link-exact-active nuxt-link-active"><?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), array('30'), '', array( 'class' => 'app-logo-img') ); ?>
+											<a href="/en/" class="app-logo-link nuxt-link-exact-active nuxt-link-active"><?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), '', '', array( 'class' => 'app-logo-img') ); ?>
 												<div class="app-logo">
 													<div class="app-logo-title">Estado Plurinacional de Bolivia</div>
 													<div class="app-logo-description"><?php bloginfo( 'name' ); ?></div>

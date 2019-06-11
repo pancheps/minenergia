@@ -134,6 +134,14 @@
 .bg-solid-blue {
   color: #eeeeee;
 }
+
+.individual-post {
+    background-color: darkgray;
+    margin: 5px;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
 @media (max-width: 768px) {
 .p-box-porcentajes .p-box-item {
     padding: 15px;

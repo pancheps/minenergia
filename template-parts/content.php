@@ -9,11 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-7", "individual-post")); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1>', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -23,7 +23,6 @@
 			<div class="entry-meta">
 				<?php
 				endewp_posted_on();
-				endewp_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -31,20 +30,12 @@
 
 	<?php endewp_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="el-card__body">
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'endewp' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		if ( !is_singular() )
+			the_excerpt();
+		else 
+			the_content();
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'endewp' ),
@@ -53,7 +44,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php endewp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</div><!-- #post-<?php the_ID(); ?> -->

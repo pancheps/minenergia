@@ -1,4 +1,644 @@
 @charset "UTF-8";
+/* Color del tema */
+/* Ubicación de la fuente, obligatoria */
+.container-stick .el-main {
+  padding-top: 50px;
+}
+.container-stick .portal-default .el-header .divider {
+  border-left: 1px solid #626262;
+}
+.divider {
+  height: 50px;
+  border: none;
+  border-left: 1px solid #959595;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+  margin: 0 15px;
+}
+.el-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #eeeeee;
+  font-weight: 300;
+}
+.app-menu__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+.app-menu__item {
+  display: inline-block;
+  position: relative;
+}
+.app-menu__item > a {
+    color: #eeeeee;
+    display: block;
+    line-height: 50px;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+    outline: 0;
+    font-weight: 300;
+}
+.app-menu__item.active > a {
+    background-color: rgba(255, 255, 255, 0.94);
+    color: #333333;
+}
+.app-menu__item .app-menu__link-mobile {
+    display: none;
+}
+.app-menu__item .app-menu__link-desktop {
+    display: inline-block;
+}
+.app-menu__item .el-icon-arrow-down {
+    display: none;
+}
+.app-menu__item .app-menu__sublist-list {
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
+    max-width: 380px;
+}
+.app-menu__item .app-menu__sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.app-menu__item .app-menu__link {
+    margin: 60px auto 30px auto;
+    widows: 100%;
+    max-width: 580px;
+    text-align: center;
+    position: relative;
+}
+.app-menu__item .app-menu__link .app-search__close {
+      top: -15px;
+      right: 0;
+}
+.app-menu__item .app-menu__link .app-search__close .el-icon-close {
+        font-size: 4rem;
+}
+.app-menu__item .app-menu__link a {
+      color: #333333;
+      font-size: 1.7rem;
+      text-decoration: none;
+}
+.app-menu__item .app-menu__link a:hover, .app-menu__item .app-menu__link a.active {
+        color: #024f9b;
+        transition: all .5s ease;
+}
+.app-menu__item .app-menu__subitem {
+    border-top: 1px solid #999;
+}
+.app-menu__item .app-menu__subitem:first-child {
+      border: none;
+}
+.app-menu__item .app-menu__subitem > a {
+      line-height: 60px;
+      padding: 0 15px;
+      text-decoration: none;
+      color: #333333;
+      transition: all .5s ease;
+      display: block;
+      font-size: 1.2rem;
+}
+.app-menu__item .app-menu__subitem:hover > a, .app-menu__item .app-menu__subitem.active > a {
+      color: #024f9b;
+      transition: all .5s ease;
+}
+.app-menu__main-overlay {
+  display: none;
+}
+.app-logo-container a {
+  text-decoration: none;
+}
+.app-logo-img {
+  width: 30px;
+  display: inline-block;
+  margin: 7px 3px 0 0;
+}
+.app-header__submenu {
+  background-color: transparent;
+  border: 1px solid #eeeeee;
+  border-radius: 0;
+  transform: translate(16px, -8px);
+  margin-right: -4px;
+  min-width: 180px;
+}
+.app-header__submenu .el-dropdown-menu__item {
+    background-color: transparent;
+    color: #eeeeee;
+    padding: 0;
+}
+.app-header__submenu .el-dropdown-menu__item a {
+      padding: 0 20px;
+      color: #eeeeee;
+      display: block;
+      text-decoration: none;
+}
+.app-header__submenu .el-dropdown-menu__item a:hover {
+        color: #bbbbbb;
+}
+.app-header__submenu .el-dropdown-menu__item:hover {
+      background-color: transparent;
+      color: #bbbbbb;
+}
+.app-header__submenu .popper__arrow {
+    display: none;
+}
+.app-header__search-text,
+.app-menu__btn-open,
+.app-menu__btn-open-menu,
+.app-search__close,
+.app-header-lang-2 {
+  display: none;
+}
+.app-header__options,
+.app-header__search {
+  display: inline-block;
+}
+.app-btn {
+  opacity: .7;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.app-btn:hover {
+    opacity: 1;
+}
+.app-btn > i {
+    font-size: 3rem;
+    color: #777;
+    cursor: pointer;
+}
+@media (max-width: 350px) {
+.portal-default .b-services-short {
+    display: inline;
+}
+.portal-default .b-services-long {
+    display: none;
+}
+}
+@media (min-width: 768px) {
+@-webkit-keyframes menuEffect {
+0% {
+      opacity: 0;
+      top: calc(100% + 20px);
+}
+100% {
+      opacity: 1;
+      top: 100%;
+}
+}
+@keyframes menuEffect {
+0% {
+      opacity: 0;
+      top: calc(100% + 20px);
+}
+100% {
+      opacity: 1;
+      top: 100%;
+}
+}
+.app-menu {
+    height: 50px;
+    transition: all .4s ease;
+}
+.app-menu.stick {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.85);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      transition: all .4s ease;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+      padding: 0 15px;
+}
+.app-menu .app-btn.arrow-left {
+      position: absolute;
+      left: -88px;
+      top: 50%;
+      margin-top: -24px;
+}
+.app-menu .app-btn.arrow-right {
+      position: absolute;
+      right: -88px;
+      top: 50%;
+      margin-top: -24px;
+}
+.app-menu__item .app-menu__sublist-container {
+    position: fixed;
+    padding-top: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    text-align: center;
+}
+.app-menu__item .app-menu__sublist-box {
+    background-color: rgba(255, 255, 255, 0.94);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.app-menu__item .open-menu.app-menu__sublist-container {
+    display: block;
+}
+.app-menu__item .open-menu.app-menu__sublist-container ul {
+      display: block;
+}
+.app-menu__item .app-menu__sublist {
+    background-color: transparent;
+}
+.app-menu__item .app-search__close {
+    display: block;
+}
+}
+@media (max-width: 768px) {
+.portal-home .app-b-servicio {
+    margin-left: auto;
+}
+.portal-home .el-main .app-logo-img {
+    display: none;
+}
+.portal-home .el-footer .app-footer .app-footer-servicio, .portal-default .el-footer .app-footer .app-footer-servicio {
+    display: none;
+}
+.portal-home .el-header, .portal-default .el-header {
+    padding: 0;
+}
+.portal-home .el-header .app-logo-container, .portal-default .el-header .app-logo-container {
+      margin-right: auto;
+}
+.portal-home .el-header .app-header-lang-2, .portal-default .el-header .app-header-lang-2 {
+      display: block;
+}
+.portal-home .el-header .app-header-lang-2 .el-button, .portal-default .el-header .app-header-lang-2 .el-button {
+        padding: 16px 12px;
+}
+.portal-home .el-header .app-b-servicio, .portal-default .el-header .app-b-servicio {
+      display: inline-block;
+}
+.portal-home .el-header .app-b-servicio .b-servicio-opciones, .portal-default .el-header .app-b-servicio .b-servicio-opciones {
+        top: 49px;
+        left: 18px;
+        width: 136px;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 144px;
+        z-index: 1;
+}
+.portal-home .el-header .app-b-servicio .b-servicio-opciones .b-servicio-item, .portal-default .el-header .app-b-servicio .b-servicio-opciones .b-servicio-item {
+          display: inline-block;
+          margin: 0 5px;
+}
+.portal-home .el-header .app-logo-link, .portal-default .el-header .app-logo-link {
+      padding-left: 10px;
+}
+.portal-home .el-header .app-menu__btn-open-menu, .portal-default .el-header .app-menu__btn-open-menu {
+      display: inline-block;
+      padding: 0;
+      margin-left: 8px;
+}
+.portal-home .el-header .app-menu__btn-open-menu .caret-menu, .portal-default .el-header .app-menu__btn-open-menu .caret-menu {
+        display: block;
+        width: 30px;
+        height: 32px;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+}
+.portal-home .el-header .app-menu__btn-open-menu .caret-menu span, .portal-default .el-header .app-menu__btn-open-menu .caret-menu span {
+          position: absolute;
+          display: block;
+          height: 2px;
+          right: 4px;
+          background: #fff;
+          border-radius: 9px;
+          opacity: 1;
+          left: 4px;
+          transition: .25s ease-in-out;
+}
+.portal-home .el-header .app-menu__btn-open-menu .caret-menu span:first-child, .portal-default .el-header .app-menu__btn-open-menu .caret-menu span:first-child {
+            top: 8px;
+}
+.portal-home .el-header .app-menu__btn-open-menu .caret-menu span:nth-child(2), .portal-default .el-header .app-menu__btn-open-menu .caret-menu span:nth-child(2) {
+            top: 15px;
+}
+.portal-home .el-header .app-menu__btn-open-menu .caret-menu span:last-child, .portal-default .el-header .app-menu__btn-open-menu .caret-menu span:last-child {
+            top: 22px;
+}
+.portal-home .el-header .app-menu__btn-open-menu i, .portal-default .el-header .app-menu__btn-open-menu i {
+        font-size: 2rem;
+}
+.portal-home .el-header .app-search__close, .portal-default .el-header .app-search__close {
+      display: block;
+}
+.app-menu__main {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    min-height: 100vh;
+    padding-bottom: 10px;
+}
+.app-menu__main .app-btn.arrow-left, .app-menu__main .app-btn.arrow-right {
+      display: none;
+}
+.app-menu__main.open-menu {
+      display: block;
+}
+.app-menu__main.open-menu + .app-menu__main-overlay {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.97);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+}
+.app-menu__main .app-menu__sublist-box {
+      padding-left: 44px;
+}
+.app-menu__main .app-menu__list {
+      margin: 60px 40px 0;
+}
+.app-menu__main .app-menu__btn-open {
+      width: 40px;
+      display: inline-block;
+}
+.app-menu__main .app-menu__btn-open .el-icon-arrow-down {
+        font-size: 1.2rem;
+        transform: rotate(-90deg);
+        transition: all .5s ease;
+}
+.app-menu__main .app-menu__link {
+      display: none;
+}
+.app-menu__main .app-menu__link-mobile {
+      display: inline-block;
+      padding: 0 15px 0 0;
+      font-size: 1.2rem;
+}
+.app-menu__main .app-menu__link-mobile:hover {
+        color: #024f9b;
+}
+.app-menu__main .app-menu__link-desktop {
+      display: none;
+}
+.app-menu__main .app-logo {
+      display: inline-block;
+      color: #333333;
+}
+.app-menu__main .app-lang {
+      display: none;
+}
+.app-menu__main .el-icon-arrow-down {
+      display: inline-block;
+}
+.app-menu__main .app-menu__list {
+      display: block;
+      padding-top: 10px;
+}
+.app-menu__main .app-menu__item {
+      border-bottom: 1px solid #aaa;
+      display: block;
+      padding: 0 0px 0 25px;
+}
+.app-menu__main .app-menu__item > a {
+        color: #333333;
+}
+.app-menu__main .app-menu__item.active > a {
+        background-color: transparent;
+}
+.app-menu__main .app-menu__item.active .app-menu__btn-open {
+        transform: rotate(90deg);
+}
+.app-menu__main .app-menu__item:last-child {
+        border: none;
+}
+.app-menu__main .app-menu__sublist-list {
+      min-width: auto;
+      max-width: 100%;
+}
+.app-menu__main .app-menu__sublist {
+      position: static;
+      border: none;
+      padding: 0;
+}
+.app-menu__main .app-menu__sublist.open-menu {
+        display: block;
+}
+.app-menu__main .app-menu__subitem,
+    .app-menu__main .app-menu__subitem:first-child {
+      border: none;
+      border-top: 1px solid #aaa;
+}
+.app-menu__main .app-menu__subitem > a,
+      .app-menu__main .app-menu__subitem:first-child > a {
+        color: #333333;
+        padding: 0 25px 0 0;
+        line-height: 42px;
+        font-size: 1rem;
+}
+.app-menu__main .app-header__options,
+    .app-menu__main .app-header__search {
+      display: block;
+      padding: 0 24px;
+}
+.app-menu__main .divider {
+      height: 0;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #eeeeee;
+      margin: 8px 0px;
+}
+.app-menu__main .app-lang-divider {
+      display: none;
+}
+.app-menu__main .app-header__search-text {
+      display: inline;
+}
+.app-menu__main .app-search__close {
+      top: 30px;
+      right: 22px;
+}
+.app-menu__main .app-search__close .el-icon-close {
+        font-size: 2.8rem;
+}
+.app-menu__main .app-btn__link {
+      color: #333333;
+}
+.app-menu__main .app-btn__link i {
+        color: #333333;
+}
+.app-lang__submenu {
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-10px);
+}
+}
+@media (max-width: 992px) {
+.app-logo-link .app-logo {
+    display: none;
+}
+.open-menu .app-logo-link .app-logo {
+    display: inline-block;
+    margin: 3px 0 0 10px;
+}
+.portal-home .app-footer .app-footer-servicio {
+    display: block;
+}
+.portal-home .app-logo {
+    display: inline-block;
+}
+.portal-home .app-menu__main {
+    margin-left: auto;
+}
+.portal-home .app-b-servicio {
+    display: none;
+}
+.app-footer .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+}
+@media (max-width: 1200px) {
+.portal-default .app-footer .app-footer-servicio {
+    display: block;
+}
+.portal-default .app-b-servicio {
+    display: none;
+}
+.app-lang .app-lang-text-short {
+    display: inline-block;
+}
+.app-lang .app-lang-text-long {
+    display: none;
+}
+}
+@media (min-width: 1250px) {
+.portal-home .app-header .b-servicio-titulo {
+    display: inline-block;
+}
+.portal-home .app-header .b-servicio-opciones {
+    display: inline-block;
+}
+.portal-home .app-header .b-service-two-points {
+    display: inline-block;
+}
+.portal-home .app-header .b-icon-arrow-down {
+    display: none;
+}
+}
+@media (max-width: 1250px) {
+.portal-home .app-header .b-servicio-titulo {
+    display: block;
+    cursor: pointer;
+}
+.portal-home .app-header .b-servicio-opciones {
+    position: absolute;
+    bottom: -49px;
+    left: -5px;
+    width: 310px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 2px 0 6px;
+    border-radius: 3px;
+    display: none;
+    z-index: 1;
+}
+.portal-home .app-header .b-service-two-points {
+    display: none;
+}
+.portal-home .app-header .b-icon-arrow-down {
+    display: inline-block;
+}
+.portal-home .app-header .b-servicio {
+    position: relative;
+}
+.portal-home .app-header .b-servicio::before {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 250px;
+      height: 110px;
+}
+.portal-home .app-header .app-b-servicio:hover .b-servicio::before {
+    display: block;
+}
+.portal-home .app-header .app-b-servicio:hover .b-servicio-opciones {
+    display: block;
+}
+}
+@media (min-width: 1500px) {
+.portal-default .app-header .b-servicio-titulo {
+    display: inline-block;
+}
+.portal-default .app-header .b-servicio-opciones {
+    display: inline-block;
+}
+.portal-default .app-header .b-service-two-points {
+    display: inline-block;
+}
+.portal-default .app-header .b-icon-arrow-down {
+    display: none;
+}
+}
+@media (max-width: 1500px) {
+.portal-default .app-header .b-servicio-titulo {
+    display: block;
+    cursor: pointer;
+}
+.portal-default .app-header .b-servicio-opciones {
+    position: absolute;
+    bottom: -49px;
+    left: -5px;
+    width: 310px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 2px 0 6px;
+    border-radius: 3px;
+    display: none;
+    z-index: 1;
+}
+.portal-default .app-header .b-service-two-points {
+    display: none;
+}
+.portal-default .app-header .b-icon-arrow-down {
+    display: inline-block;
+}
+.portal-default .app-header .b-servicio {
+    position: relative;
+}
+.portal-default .app-header .b-servicio::before {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 250px;
+      height: 110px;
+}
+.portal-default .app-header .app-b-servicio:hover .b-servicio::before {
+    display: block;
+}
+.portal-default .app-header .app-b-servicio:hover .b-servicio-opciones {
+    display: block;
+}
+}
+
 
 /* Color del tema */
 
