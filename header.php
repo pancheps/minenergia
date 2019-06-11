@@ -20,7 +20,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php 
+$bgClasses = array("portal-bg-red", "portal-bg-yellow", "portal-bg-green", "portal-bg-blue");
+$classId = array_rand($bgClasses);
+$currClass = $bgClasses[$classId];
+?>
+<body <?php body_class($currClass); ?>>
 
 	<div id="__nuxt" class="site">
 		<div id="__layout">

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* Color del tema */
+/* Ubicación de la fuente, obligatoria */
+.page {
+  padding-bottom: 50px; }
+  .page .el-card {
+    border-radius: 0; }
+  .page .post {
+    height: 400px;
+    position: relative; }
+  .page .post-details {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #eeeeee;
+    text-transform: uppercase;
+    background: linear-gradient(0, black, rgba(0, 0, 0, 0));
+    padding: 25px 15px 12px 15px;
+    text-decoration: none; }
+    .page .post-details:hover {
+      text-decoration: underline; }
+  .page .post-image {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-color: #323232;
+    background-repeat: no-repeat; }
+  .page .post-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300; }
+
+.page-header {
+  margin-top: 30px;
+  position: relative; }
+
+.page-img-main {
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.page-title {
+  color: #eeeeee;
+  padding: 15px 0 20px; }
+  .page-title h1 {
+    font-weight: 300;
+    margin: 0; }
+
+.page-img-main + .page-title {
+  padding: 40px 15px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0, black, rgba(0, 0, 0, 0)); }
+
+.page-title-details {
+  font-style: italic;
+  color: #ffdb60;
+  font-size: .8rem;
+  margin-top: 5px; }
+  .page-title-details a {
+    color: #ffdb60;
+    font-size: .8rem;
+    text-decoration: none; }
+    .page-title-details a:hover {
+      text-decoration: underline; }
+
+.page-content {
+  border-top: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  font-size: 1.1rem;
+  line-height: 1.6rem; }
+  .page-content hr {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 0 0 15px 0; }
+  .page-content h2 {
+    font-weight: 300;
+    margin: 0 0 15px; }
+  .page-content p {
+    margin: 0 0 15px; }
+  .page-content a {
+    color: #024f9b;
+    text-decoration: none; }
+    .page-content a:hover {
+      text-decoration: underline; }
+  .page-content iframe {
+    max-width: 100%; }
+  .page-content figure {
+    margin: 10px; }
+  .page-content .wp-block-image {
+    margin: 10px; }
+    .page-content .wp-block-image img {
+      max-width: 100%;
+      height: auto; }
+  .page-content .aligncenter {
+    text-align: center; }
+  .page-content .alignright {
+    text-align: right; }
+  .page-content .alignleft {
+    text-align: left; }
+
+@media (max-width: 768px) {
+  .page .post, .page .post-image {
+    height: 200px; }
+  .page .page-content figure,
+  .page .page-content .wp-block-image {
+    margin: 10px 0; }
+  .page .page-img-main {
+    height: 300px; }
+  .page .page-title h1 {
+    font-size: 1.5rem; } }
+
+@media (min-width: 768px) {
+  .page .post, .page .post-image {
+    height: 250px; } }
+
+@media (min-width: 992px) {
+  .page .post, .page .post-image {
+    height: 320px; } }
+
+@media (min-width: 1200px) {
+  .page .post, .page .post-image {
+    height: 400px; } }

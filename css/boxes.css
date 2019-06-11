@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* Color del tema */
+/* Ubicación de la fuente, obligatoria */
+.p-box {
+  margin-top: -1px;
+  top: -1px;
+}
+.p-box-footer {
+  height: 160px;
+  box-sizing: border-box;
+}
+.p-box-footer-2 {
+  height: 70px;
+  box-sizing: border-box;
+}
+.p-box-footer-2 a {
+    color: #ffd647;
+}
+.p-box-phone-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.p-box-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.p-box-phone span {
+    font-size: 1rem;
+    margin-left: 8px;
+}
+.p-box-details {
+  text-align: right;
+  font-weight: 300;
+  padding: 8px 10px 0;
+}
+.p-box-details h3, .p-box-details p {
+    font-weight: 300;
+    margin: 0;
+}
+.p-box-details p {
+    font-size: .75rem;
+}
+.p-box-comentarios {
+  color: #eeeeee;
+  padding: 0 10px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.p-box-comentarios h3 {
+    font-size: .9rem;
+    font-weight: 600;
+}
+.p-box-comentarios h3, .p-box-comentarios p {
+    margin: 0;
+}
+.p-box-comentarios p {
+    font-size: .75rem;
+}
+.p-box-avatar {
+  max-width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #666666;
+  margin: 0 auto;
+}
+.p-box-porcentajes {
+  color: #eeeeee;
+  font-weight: 300;
+}
+.p-box-porcentajes h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0 5px 0px;
+    line-height: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.p-box-porcentajes h3 span {
+      font-size: .7rem;
+      font-weight: 300;
+}
+.p-box-porcentajes .p-box-number {
+    font-size: 3rem;
+}
+.p-box-porcentajes .p-box-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.p-box-porcentajes .p-box-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.p-box-porcentajes .p-box-list li {
+      display: inline-block;
+}
+.p-box-porcentajes .p-box-item {
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+.p-box-porcentajes .p-box-item::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 60px;
+      border-right: 1px solid #eeeeee;
+}
+.p-box-porcentajes .p-box-item:last-child::before {
+      display: none;
+}
+.bg-solid-cyan {
+  background-color: #00a89c;
+}
+.bg-solid-yellow {
+  background-color: #f49e07;
+}
+.bg-solid-gray {
+  background-color: #666666;
+}
+.bg-solid-blue {
+  background-color: #467795;
+}
+.bg-solid-cyan,
+.bg-solid-yellow,
+.bg-solid-gray,
+.bg-solid-blue {
+  color: #eeeeee;
+}
+@media (max-width: 768px) {
+.p-box-porcentajes .p-box-item {
+    padding: 15px;
+}
+.p-box-porcentajes .p-box-item::before {
+      right: auto;
+      right: initial;
+      top: auto;
+      top: initial;
+      bottom: 0;
+      height: 1px;
+      width: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: none;
+      border-bottom: 1px solid #eeeeee;
+}
+.p-box-footer {
+    height: auto;
+}
+.p-box-details {
+    text-align: center;
+}
+.p-box-comment {
+    margin: 15px 0;
+}
+.p-box-avatar {
+    margin-top: 15px;
+}
+.p-box-phone {
+    padding: 0 15px;
+}
+}
+@media (min-width: 768px) {
+.p-box-comment {
+    margin-bottom: 10px;
+}
+}
+
