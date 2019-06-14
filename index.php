@@ -29,7 +29,9 @@ get_header();
 					</div>
 				</div>
 				<?php
-			endif;
+			endif; ?>
+			<div class="page-content">
+			<?php
 			$counter = 0;
 			$postPerRow = 3;
 			/* Start the Loop */
@@ -58,7 +60,9 @@ get_header();
 				}
 
 			endwhile;
-
+			?>
+			</div>
+			<?php
 			the_posts_navigation();
 
 		else :

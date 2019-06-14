@@ -31,6 +31,7 @@ body {
 
 .el-main {
     padding-top: 0;
+    overflow: hidden;
 }
 
 .el-alert {

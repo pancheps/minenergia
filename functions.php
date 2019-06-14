@@ -148,6 +148,16 @@ function endewp_scripts() {
 add_action( 'wp_enqueue_scripts', 'endewp_scripts' );
 
 /**
+ * Adds the post selector variable
+ */
+add_filter('query_vars', 'parameter_queryvars' );
+function parameter_queryvars( $qvars )
+{
+	$qvars[] = 'subpId';
+	return $qvars;
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

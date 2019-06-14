@@ -533,11 +533,12 @@ hr {
 
 ul,
 ol {
-    margin: 0 0 1.5em 3em;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-    list-style: disc;
+    list-style: none;
 }
 
 ol {
@@ -1082,4 +1083,25 @@ object {
 
 .gallery-caption {
     display: block;
+}
+
+.title-base {
+    background: rgba(31, 54, 86, 0.9);
+    color: white;
+    font-size: 32px;
+    border-color: #1F3656;
+    border-style: solid;
+    border-width: 10px 0 0 0;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.nav {
+    padding: 0 15px;
 }

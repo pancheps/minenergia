@@ -9,7 +9,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-7", "individual-post")); ?>>
+<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
