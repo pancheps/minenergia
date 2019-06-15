@@ -10,16 +10,21 @@
 ?>
 
 <section class="container page" <?php post_class(array("container", "page")); ?>>
+
+<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
+		<?php
+		if ( is_singular() ) : ?>
 <div class="page-content">
 		<div class="row1 row">
 			<div class=" title-base text-center col-md-12 ">
 			<?php the_title( '<h2>', '</h2>' ); ?>
 			</div>
 		</div>
-
-<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
-	<header class="entry-header">
-		<?php
+			<?php
+		else :
+			endewp_post_thumbnail();
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -29,9 +34,8 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php endewp_post_thumbnail(); ?>
+	<?php  ?>
 
 	<div class="el-card__body">
 		<?php
@@ -46,7 +50,9 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
-
-</div><!-- #post-<?php the_ID(); ?> -->
+	<?php
+		if ( is_singular() ) : ?>
 </div>
+		<?php endif; ?>
+</div><!-- #post-<?php the_ID(); ?> -->
 </section>
