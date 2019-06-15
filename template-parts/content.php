@@ -9,14 +9,17 @@
 
 ?>
 
+<section class="container page" <?php post_class(array("container", "page")); ?>>
+<div class="page-content">
+		<div class="row1 row">
+			<div class=" title-base text-center col-md-12 ">
+			<?php the_title( '<h2>', '</h2>' ); ?>
+			</div>
+		</div>
+
 <div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1>', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -45,3 +48,5 @@
 	</div><!-- .entry-content -->
 
 </div><!-- #post-<?php the_ID(); ?> -->
+</div>
+</section>

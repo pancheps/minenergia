@@ -12,7 +12,6 @@ get_header();
 
 	
 <main id="main" class="el-main">
-<section class="container page">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -27,7 +26,6 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-</section>
 </main><!-- #main -->
 
 <?php
