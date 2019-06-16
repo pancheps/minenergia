@@ -42,7 +42,7 @@ $currClass = $bgClasses[$classId];
 									?>
 									<div class="app-logo-container">
 										<div class="app-title">
-											<a href="/en/" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
+											<a href="<?php echo site_url(); ?>" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
 											<img src="<?php echo get_template_directory_uri() . '/img/bolivia.png'; ?>" class="app-logo-img" alt="">
 											<div class="app-logo">
 													<div class="app-logo-title">Estado Plurinacional de Bolivia</div>
@@ -56,7 +56,7 @@ $currClass = $bgClasses[$classId];
 										endif;
 									?>
 									<div class="app-b-servicio">
-										<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia at your service</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
+										<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 											<ul class="b-servicio-opciones">
 												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
 														<!----><i class="icon-facebook"></i>
@@ -89,7 +89,6 @@ $currClass = $bgClasses[$classId];
 										</div>
 									</div>
 									<div class="app-menu__main">
-									<button aria-label="Cerrar menú" type="button" class="app-search__close"><i class="el-icon-close"></i></button>
 										<?php
 										wp_nav_menu( array(
 											'theme_location' => 'menu-1',

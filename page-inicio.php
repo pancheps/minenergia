@@ -11,7 +11,7 @@ get_header();
     <section class="<?php if ( is_front_page() ) : ?>container-home<?php else : ?>container page<?php endif; ?>">
         <div class="app-logo-container">
             <div class="app-title">
-                <a href="/en/" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
+                <a href="<?php echo site_url(); ?>" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
                 <img src="<?php echo get_template_directory_uri() . '/img/bolivia.png'; ?>" class="app-logo-img" alt="">
                     <div class="app-logo">
                         <div class="app-logo-title">Estado Plurinacional de Bolivia</div>

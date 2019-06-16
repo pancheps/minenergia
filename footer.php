@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="app-footer-servicio">
-				<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia at your service</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
+				<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 					<ul class="b-servicio-opciones">
 						<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
 								<!----><i class="icon-facebook"></i>
