@@ -40,7 +40,7 @@
 	<div class="el-card__body">
 		<?php
 		if ( !is_singular() )
-			the_excerpt();
+		echo the_excerpt_max_charlength(140);
 		else 
 			the_content();
 

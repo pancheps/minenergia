@@ -19,6 +19,7 @@ get_header();
 		<section class="container page">
 		  
 		<?php
+		
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -37,6 +38,8 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+				$categories = get_the_category();
+				if ($categories[0]->name == "Noticias") {
 				if ($counter < $postPerRow) {
 					if ($counter == 0) {
 						?>
@@ -58,7 +61,7 @@ get_header();
 					<?php
 					$counter = 0;
 				}
-
+				}
 			endwhile;
 			?>
 			</div>
