@@ -78,3 +78,9 @@
     font-weight: 300;
     color: #333;
 }
+
+@media (max-width: 768px) {
+    .app-title {
+        margin: -40px 0 0 40px;;
+    }
+}

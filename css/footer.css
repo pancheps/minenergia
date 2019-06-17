@@ -6,9 +6,10 @@
 /* Ubicación de la fuente, obligatoria */
 
 .app-footer {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #000;
+    background-color:rgba(255, 255, 255, 0.8);
     line-height: 50px;
-    color: #eeeeee;
+    color: #000;
     font-size: .9rem;
     font-weight: 300;
     bottom: 0;

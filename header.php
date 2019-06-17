@@ -34,7 +34,7 @@ $currClass = $bgClasses[$classId];
 					<div class="">
 						<nav id="site-navigation" class="main-navigation app-menu">
 							<div class="app-menu__container">
-								<div class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
+								<div class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" id="main-menu-toggle" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
 									<!---->
 									<!----><span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
 									<?php
@@ -56,8 +56,8 @@ $currClass = $bgClasses[$classId];
 										endif;
 									?>
 									<div class="app-b-servicio">
-										<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
-											<ul class="b-servicio-opciones">
+										<div class="b-servicio"><span id="top-menu-servicios" onclick="javascript:toggleServices()" class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
+											<ul id="top-services-list" class="b-servicio-opciones">
 												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
 														<!----><i class="icon-facebook"></i>
 														<!----></button></li>
@@ -88,7 +88,7 @@ $currClass = $bgClasses[$classId];
 											</ul>
 										</div>
 									</div>
-									<div class="app-menu__main">
+									<div>
 										<?php
 										wp_nav_menu( array(
 											'theme_location' => 'menu-1',

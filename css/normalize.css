@@ -32004,6 +32004,10 @@ template {
       align-items: center; }
 .el-row--flex.is-align-bottom {
       align-items: flex-end; }
+@media (max-width: 768px) {
+  header .el-row--flex {
+    display: block; }
+}
 /* Element Chalk Variables */
 /* Transition
 -------------------------- */
