@@ -7,7 +7,7 @@
 
 .app-footer {
     border-top: 1px solid #000;
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color:rgba(255, 255, 255, 0.6);
     line-height: 50px;
     color: #000;
     font-size: .9rem;
@@ -25,7 +25,7 @@
 }
 
 .app-footer a {
-    color: #eeeeee;
+    color: #000;
     text-decoration: none;
     font-size: .9rem;
     font-weight: 300;
