@@ -7,9 +7,22 @@
 
 .app-footer {
     border-top: 1px solid #000;
-    background-color:rgba(255, 255, 255, 0.6);
+    background-color:rgba(187, 187, 187, 0.6);
     line-height: 50px;
     color: #000;
+    font-size: .9rem;
+    font-weight: 300;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    width: 100%;
+}
+
+.portal-home .app-footer {
+    border-top: 1px solid #fff;
+    background-color:transparent;
+    line-height: 50px;
+    color: #fff;
     font-size: .9rem;
     font-weight: 300;
     bottom: 0;
@@ -26,6 +39,13 @@
 
 .app-footer a {
     color: #000;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.portal-home .app-footer a {
+    color: #ffffff;
     text-decoration: none;
     font-size: .9rem;
     font-weight: 300;

@@ -5,6 +5,13 @@
     right: 15px;
 }
 
+.portal-home .b-terminos .b-terminos-link {
+    font-size: .7rem;
+    position: absolute;
+    bottom: 36px;
+    right: 15px;
+}
+
 .b-dialog-terminos .el-dialog {
     width: 92%;
     max-width: 680px;
