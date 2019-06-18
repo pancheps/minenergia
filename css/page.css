@@ -106,6 +106,9 @@
     text-align: right; }
   .page-content .alignleft {
     text-align: left; }
+  #navbarCollapse .nav li {
+    line-height: 2em;
+  }
 
 @media (max-width: 768px) {
   .page .post, .page .post-image {
