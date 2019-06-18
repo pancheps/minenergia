@@ -16,8 +16,8 @@ get_header();
 ?>
 
 	<main id="main" class="el-main">
-		<section class="container page">
-		  
+		<section class="container page" <?php post_class(array("container", "page")); ?>>
+
 		<?php
 		
 		if ( have_posts() ) :

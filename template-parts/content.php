@@ -9,7 +9,6 @@
 
 ?>
 
-<section class="container page" <?php post_class(array("container", "page")); ?>>
 
 <div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
 		<?php
@@ -55,4 +54,3 @@
 </div>
 		<?php endif; ?>
 </div><!-- #post-<?php the_ID(); ?> -->
-</section>
