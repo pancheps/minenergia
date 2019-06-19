@@ -12,11 +12,6 @@ $cat_posts = get_posts(array('category' => $cat_id));
 ?>
 
 <section id="post-<?php the_ID(); ?>" <?php post_class(array("container", "page")); ?>>
-	<div class="page-header">
-		<div class="page-title">
-			<?php the_title( '<h1>', '</h1>' ); ?>
-		</div>
-	</div>
 
 	<?php endewp_post_thumbnail(); ?>
 
