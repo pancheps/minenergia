@@ -373,7 +373,7 @@
         padding-left: 44px;
     }
     .app-menu__main .app-menu__list {
-        margin: 60px 40px 0;
+        margin: 50px 40px 0;
     }
     .app-menu__main .app-menu__btn-open {
         width: 40px;
@@ -710,8 +710,8 @@
 .menu-item > a {
     color: #eeeeee;
     display: block;
-    line-height: 30px;
-    padding: 15px 15px;
+    line-height: 50px;
+    padding: 0 15px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
@@ -899,7 +899,6 @@
     cursor: pointer;
 }
 
-.
 
 @media (max-width: 350px) {
     .portal-default .b-services-short {
