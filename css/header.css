@@ -710,8 +710,8 @@
 .menu-item > a {
     color: #eeeeee;
     display: block;
-    line-height: 50px;
-    padding: 0 15px;
+    line-height: 30px;
+    padding: 15px 15px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
