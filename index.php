@@ -24,9 +24,10 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<div class="page-header">
-					<div class="page-title">
-					<h1><?php single_post_title(); ?></h1>
+			<div class="page-content">
+				<div class="row1 row">
+					<div class=" title-base text-center col-md-12 ">
+					<h2>NOTICIAS</h2>
 					</div>
 				</div>
 				<?php
@@ -74,6 +75,11 @@ get_header();
 
 		endif;
 		?>
+		<?php
+		if ( is_home() && ! is_front_page() ) :
+			?>
+		</div>
+		<?php endif; ?>
 		</section>
 	</main>
 <?php

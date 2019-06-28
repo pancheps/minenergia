@@ -32480,7 +32480,7 @@ template {
   position: relative;
   left: 95.83333%; }
 .el-col-24 {
-  width: 100%; }
+  /* width: 100%; */ }
 .el-col-offset-24 {
   margin-left: 100%; }
 .el-col-pull-24 {
