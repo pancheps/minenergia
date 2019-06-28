@@ -4,6 +4,7 @@
 .p-box {
   margin-top: -1px;
   top: -1px;
+  padding-bottom: 5px;
 }
 .p-box-footer {
   height: 160px;
