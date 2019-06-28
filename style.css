@@ -770,6 +770,15 @@ a:active {
         display: inline-block;
     }
 }
+@media screen and (max-width: 1250px) {
+    #top-services-list {
+        display: none;
+    }
+    .portal-home .app-b-servicio {
+        display: none;
+    }
+    
+}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

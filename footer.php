@@ -90,9 +90,19 @@
 	</div>
 </footer>
 </section>
+
+<?php
+if( is_front_page() ) :
+?>
+
 <section>
 	<div>hola</div>
 </section>
+
+<?php
+endif;
+?>
+
 </div>
 </div>
 <?php wp_footer(); ?>

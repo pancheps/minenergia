@@ -34,7 +34,7 @@ $currClass = $bgClasses[$classId];
 					<div class="">
 						<nav id="site-navigation" class="main-navigation app-menu">
 							<div class="app-menu__container">
-								<div class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" id="main-menu-toggle" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
+								<div id="menuItemsRow" class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" id="main-menu-toggle" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
 									<!---->
 									<!----><span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
 									<?php
