@@ -90,6 +90,9 @@
 	</div>
 </footer>
 </section>
+<section>
+	<div>hola</div>
+</section>
 </div>
 </div>
 <?php wp_footer(); ?>

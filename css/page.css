@@ -2,7 +2,7 @@
 /* Color del tema */
 /* Ubicación de la fuente, obligatoria */
 .page {
-  padding-bottom: 50px; }
+  padding-bottom: 0; }
   .page .el-card {
     border-radius: 0; }
   .page .post {
