@@ -16,7 +16,7 @@
 		<div class="row-bg relative el-row is-justify-space-between el-row--flex">
 			<div>
 				<div class="divider ml-0"></div> <a href="/en/contacto" class="">
-					Contact
+					Contacto
 				</a>
 				<div class="divider"></div>
 			</div>

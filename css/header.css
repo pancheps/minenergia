@@ -704,6 +704,7 @@
 .menu-item {
     display: inline-block;
     position: relative;
+    cursor: default;
 }
 
 .menu-item > a {
