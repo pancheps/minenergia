@@ -732,9 +732,10 @@ a:active {
 }
 
 .main-navigation ul ul a {
-    width: 200px;
+    width: 180px;
     line-height: 30px;
     padding: 15px;
+    font-size: .97em;
 }
 
 .main-navigation ul li:hover>ul,
