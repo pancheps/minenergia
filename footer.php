@@ -97,6 +97,14 @@ if( is_front_page() ) :
 
 <section>
 	<div class="row-bg el-row">
+		<div>
+			A
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="row-bg el-row">
 		<div class="vicemin lefty">
 		<a href="#">VICEMINISTERIO DE ELECTRICIDAD Y ENERGÍAS ALTERNATIVAS</a>
 		</div>
