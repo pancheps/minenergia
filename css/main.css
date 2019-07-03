@@ -180,3 +180,19 @@ hr {
     color: #f5f5f5;
 }
 
+.half-footer {
+    height: 100px;
+    width: 50%;
+    float: left;
+    display: inline-table;
+    vertical-align: middle;
+}
+
+.righty p, .righty img{
+    text-align: right;
+    padding-right: 15px;
+}
+
+.lefty p, .lefty img{
+    padding-left: 15px;
+}

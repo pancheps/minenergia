@@ -143,15 +143,53 @@ wp_reset_postdata();
 
 <section>
 	<div class="row-bg el-row">
-		<div class="vicemin lefty">
+		<div class="vicemin">
 		<a href="#">VICEMINISTERIO DE ELECTRICIDAD Y ENERGÍAS ALTERNATIVAS</a>
 		</div>
-		<div class="vicemin righty">
+		<div class="vicemin">
 		<a href="#">VICEMINISTERIO DE ALTAS TECNOLOGÍAS ENERGÉTICAS</a>
 		</div>
 	</div>
 </section>
 
+<section>
+	<div class="row-bg el-row dark-grey">
+		<div class="text-center">
+			<h2>Entidades Bajo Tuición</h2>
+		</div>
+		<div class="half-footer righty">
+			<p><a href="#"><img src="<?php echo get_template_directory_uri() . '/img/tuicion/endeandina.png'; ?>" class="app-logo-img opaque" alt=""></a></p>
+		</div>
+		<div class="half-footer lefty">
+			<p><a href="#"><img src="<?php echo get_template_directory_uri() . '/img/tuicion/endetecnologias.png'; ?>" class="app-logo-img opaque" alt=""></a></p>
+		</div>
+	</div>
+</section>
+
+<section class="container page">
+	<div class="row-bg el-row foot">
+	<div class="half-footer lefty">
+	<p>
+		<strong>CASA GRANDE DEL PUEBLO</strong> <br>
+		Piso 17 <br>
+		Calle Potosí esquina Calle Ayacucho, Zona Central<br>
+		La Paz, Bolivia
+	</p>
+	</div>
+	<div class="half-footer righty">
+		<p>
+		<strong>Edificio Ex BBA</strong> <br>
+		Av. Camacho N° 1413 esquina Calle Loayza<br>
+
+		<strong>Teléfono:</strong><br>
+		(591) - 2 - 2188800<br>
+
+		<strong>Correo:</strong><br>
+		info@minenergias.gob.bo
+		</p>
+	</div>
+	</div>
+</section>
 <?php
 endif;
 ?>

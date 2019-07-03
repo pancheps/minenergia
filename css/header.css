@@ -120,6 +120,15 @@
   display: inline-block;
   margin: 7px 3px 0 0;
 }
+.opaque {
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+.opaque:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    transition: opacity .5s ease-in-out;
+}
 .app-header__submenu {
   background-color: transparent;
   border: 1px solid #eeeeee;
