@@ -95,12 +95,50 @@
 if( is_front_page() ) :
 ?>
 
-<section>
-	<div class="row-bg el-row">
-		<div>
-			A
-		</div>
-	</div>
+<section class="container page" <?php post_class(array("container", "page")); ?>>
+
+<?php
+$the_query = new WP_Query( array( 'posts_per_page' => 7 ) );
+
+?>
+	<?php
+	$counter = 0;
+	$postPerRow = 3;
+	/* Start the Loop */
+	while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		$categories = get_the_category();
+		foreach ($categories as $key => $value) {
+			if($value->name == "Portada") {
+				if ($counter < $postPerRow) {
+					if ($counter == 0) {
+						?>
+						<div class="p-box el-row">
+						<?php
+					}
+					$counter ++;
+				} 
+			
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content-news', get_post_type() );
+				if ($counter >= $postPerRow) {
+					?>
+					</div>
+					<?php
+					$counter = 0;
+				}
+			}
+		}
+	endwhile;
+	?>
+	<?php
+	the_posts_navigation();
+wp_reset_postdata();
+?>
 </section>
 
 <section>

@@ -12,11 +12,12 @@ get_header();
 
 	
 <main id="main" class="el-main">
+<section class="container page">
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content' );
 
 
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -26,6 +27,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+</section>
 </main><!-- #main -->
 
 <?php
