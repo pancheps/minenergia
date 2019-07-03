@@ -123,6 +123,7 @@
 .opaque {
     opacity: .2;
     filter: alpha(opacity=20);
+    transition: opacity .5s ease-in-out;
 }
 .opaque:hover {
     opacity: 1.0;
