@@ -47,11 +47,10 @@
 
 .portal-default .el-footer .app-footer {
     border: none;
-    color: #444444;
 }
 
 .portal-default .el-footer .app-footer a {
-    color: #444444;
+    color: #FFF;
 }
 
 .portal-default .el-footer .app-footer a:hover {

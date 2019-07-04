@@ -35,8 +35,8 @@ $currClass = $bgClasses[$classId];
 						<nav id="site-navigation" class="main-navigation app-menu">
 							<div class="app-menu__container">
 								<div id="menuItemsRow" class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" id="main-menu-toggle" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
-									<!---->
-									<!----><span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
+									
+									<span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
 									<?php
 										if ( !is_front_page() ) :
 									?>
@@ -54,32 +54,32 @@ $currClass = $bgClasses[$classId];
 										<div class="b-servicio"><span id="top-menu-servicios" onclick="javascript:toggleServices()" class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 											<ul id="top-services-list" class="b-servicio-opciones">
 												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-facebook"></i>
-														<!----></button></li>
+														<i class="icon-facebook"></i>
+														</button></li>
 												<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-twitter"></i>
-														<!----></button></li>
-												<li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-youtube"></i>
-														<!----></button></li>
+														<i class="icon-twitter"></i>
+														</button></li>
+												<!-- <li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">
+														<i class="icon-youtube"></i>
+														</button></li>
 												<li class="b-servicio-item"><button type="button" title="Grabación" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-record"></i>
-														<!----></button></li>
+														<i class="icon-record"></i>
+														</button></li>
 												<li class="b-servicio-item"><button type="button" title="Camara" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-camera"></i>
-														<!----></button></li>
+														<i class="icon-camera"></i>
+														</button></li>
 												<li class="b-servicio-item"><button type="button" title="Teléfono" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-phone"></i>
-														<!----></button></li>
+														<i class="icon-phone"></i>
+														</button></li> -->
 												<li class="b-servicio-item"><button type="button" title="Correo electrónico" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-link"></i>
-														<!----></button></li>
+														<i class="icon-link"></i>
+														</button></li>
 												<li class="b-servicio-item"><button type="button" title="Whatsapp" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-whatsapp"></i>
-														<!----></button></li>
-												<li class="b-servicio-item"><button type="button" title="Messenger" class="el-button app-btn__link el-button--text">
-														<!----><i class="icon-messenger"></i>
-														<!----></button></li>
+														<i class="icon-whatsapp"></i>
+														</button></li>
+												<!-- <li class="b-servicio-item"><button type="button" title="Messenger" class="el-button app-btn__link el-button--text">
+														<i class="icon-messenger"></i>
+														</button></li> -->
 											</ul>
 										</div>
 									</div>

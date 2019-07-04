@@ -703,6 +703,10 @@
     height: 50px;
     border-bottom: 1px solid #eeeeee;
     font-weight: 300;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(85, 85, 85, 0.8);
+    z-index: 100;
 }
 
 .app-menu__list {
