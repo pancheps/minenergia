@@ -15,7 +15,6 @@ function toggleServices() {
     let servicesDiv = document.getElementById("top-services-list");
     if (servicesDiv.style.display != "block") {
         servicesDiv.style.display = "block";
-        servicesDiv.style.marginTop = "-35px";
         menuDiv.style.display = "none";
     } else {
         servicesDiv.style.display = "none";
