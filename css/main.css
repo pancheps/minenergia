@@ -230,3 +230,8 @@ div.post-thumbnail img {
     padding: 5px;
     background-color: rgba(9, 49, 104, .85);
 }
+
+.fill .post-thumbnail, .fill img {
+    width: 100%;
+    height: 100%;
+}
