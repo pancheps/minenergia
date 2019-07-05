@@ -112,7 +112,6 @@ $the_query = new WP_Query( array( 'posts_per_page' => 7 ) );
 	?>
 					</div>
 	<?php
-	the_posts_navigation();
 wp_reset_postdata();
 ?>
 </section>
