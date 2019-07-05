@@ -128,6 +128,18 @@ if ( ! function_exists( 'endewp_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
+				<div class="thumbnail-date">
+					<div class="thumbnail-day">
+						<?php 
+						echo get_the_date('d') . " " . get_the_date('M');
+						?>
+					</div>
+					<div class="thumbnail-year">
+						<?php
+						echo get_the_date('Y')
+						?>
+					</div>
+				</div>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -139,7 +151,20 @@ if ( ! function_exists( 'endewp_post_thumbnail' ) ) :
 					'echo' => false,
 				) ),
 			) );
+			
 			?>
+			<div class="thumbnail-date">
+				<div class="thumbnail-day">
+					<?php 
+					echo get_the_date('d') . " " . get_the_date('M');
+					?>
+				</div>
+				<div class="thumbnail-year">
+					<?php
+					echo get_the_date('Y')
+					?>
+				</div>
+			</div>
 		</a>
 
 		<?php

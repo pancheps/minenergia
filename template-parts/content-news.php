@@ -18,13 +18,6 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	
 			?>
-			<div class="entry-meta">
-				<?php
-				endewp_posted_on();
-				?>
-			</div><!-- .entry-meta -->
-
-	<?php  ?>
 
 	<div class="el-card__body">
 		<?php

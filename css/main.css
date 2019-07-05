@@ -220,3 +220,13 @@ div.post-thumbnail img {
 .nav-sub li a:hover {
     text-decoration: none;
 }
+
+.thumbnail-date {
+    left: 20px;
+    top: 0;
+    width: 50px;
+    color: #ccc;
+    position: absolute;
+    padding: 5px;
+    background-color: #093168;
+}

@@ -34,7 +34,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				endewp_posted_on();
+				if ( is_singular() )
+					endewp_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
