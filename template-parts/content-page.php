@@ -23,7 +23,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 		</div>
 		<?php if ($cat_id != 0) :?>
 		<div class="p-box el-row">
-			<div class="el-col el-col-24 el-col-sm-9">
+			<div class="el-col el-col-24 el-col-sm-7">
 				<div id="navbarCollapse" class="navbar-collapse">
 					<ul class="nav nav-sub">
 						<?php
@@ -43,7 +43,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 				</div>
 			</div>
 
-			<div class="nav el-col el-col-24 el-col-sm-15">
+			<div class="nav el-col el-col-24 el-col-sm-17">
 			<?php
 			if (!isset($subpId) || $subpId == "") {
 				the_content();

@@ -208,3 +208,15 @@ div.post-thumbnail img {
 .entry-title a, .posted-on a {
     text-decoration: none;
 }
+
+.nav-sub li {
+    padding: 5px 0 5px;
+}
+
+.nav-sub li:hover {
+    background-color: #ccc; 
+}
+
+.nav-sub li a:hover {
+    text-decoration: none;
+}
