@@ -204,3 +204,7 @@ div.post-thumbnail {
 div.post-thumbnail img {
     height: 100%;
 }
+
+.entry-title a, .posted-on a {
+    text-decoration: none;
+}

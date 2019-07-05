@@ -78,15 +78,13 @@ if( is_front_page() ) :
 ?>
 
 <section>
+		<div class="text-center">
+			<h1>NOTICIAS</h1>
+		</div>
 
 <?php
 $the_query = new WP_Query( array( 'posts_per_page' => 7 ) );
 ?>
-				<div class="row1 row">
-					<div class=" title-base text-center ">
-					<h2>NOTICIAS</h2>
-					</div>
-				</div>
 
 				<div class="p-box el-row container">
 	<?php
@@ -133,7 +131,7 @@ wp_reset_postdata();
 <section>
 	<div class="row-bg el-row dark-grey">
 		<div class="text-center">
-			<h2>Entidades Bajo Tuición</h2>
+			<h1>ENTIDADES BAJO TUICIÓN</h1>
 		</div>
 		<div class="half-footer righty">
 			<p><a href="#"><img src="<?php echo get_template_directory_uri() . '/img/tuicion/endeandina.png'; ?>" class="app-logo-img opaque" alt=""></a></p>
