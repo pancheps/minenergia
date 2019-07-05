@@ -161,7 +161,7 @@ function parameter_queryvars( $qvars )
 /**
  * Limits the excerpt length
  */
-function the_excerpt_max_charlength($charlength) {
+function the_excerpt_max_charlength($charlength, $readmore = true) {
 	$excerpt = get_the_excerpt();
 	$charlength++;
 
@@ -174,7 +174,8 @@ function the_excerpt_max_charlength($charlength) {
 		} else {
 			echo $subex;
 		}
-		echo '<a href="' . get_the_permalink() . '">Leer más..</a>';
+		if ($readmore)
+			echo '<a href="' . get_the_permalink() . '">Leer más..</a>';
 	} else {
 		echo $excerpt;
 	}
