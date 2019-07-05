@@ -67,7 +67,7 @@ get_header();
 			?>
 			</div>
 			<?php
-			the_posts_navigation();
+			echo paginate_links(array('prev_text' => '« Anterior', 'next_text' => 'Siguiente »'));
 
 		else :
 
