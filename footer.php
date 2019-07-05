@@ -78,42 +78,25 @@ if( is_front_page() ) :
 ?>
 
 <section>
-		<div class="text-center">
-			<h1>NOTICIAS</h1>
-		</div>
-
-<?php
-$the_query = new WP_Query( array( 'posts_per_page' => 7 ) );
-?>
-
-				<div class="p-box el-row container">
+	<div class="text-center">
+		<h1>NOTICIAS</h1>
+	</div>
+	<div class="p-box el-row container">
 	<?php
+	$the_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Portada', 'offset' => 5) );
 	$counter = 0;
 	$postPerRow = 4;
 	/* Start the Loop */
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
-		$categories = get_the_category();
-		foreach ($categories as $key => $value) {
-			if($value->name == "Portada") {
-				if ($counter < $postPerRow) {
-			
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content-news', get_post_type() );
-					$counter ++;
-				} 
-			}
-		}
+		if ($counter < $postPerRow) {
+			get_template_part( 'template-parts/content-news', get_post_type() );
+			$counter ++;
+		} 
 	endwhile;
+	wp_reset_postdata();
 	?>
-					</div>
-	<?php
-wp_reset_postdata();
-?>
+	</div>
 </section>
 
 <section>
