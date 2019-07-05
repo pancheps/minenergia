@@ -228,5 +228,5 @@ div.post-thumbnail img {
     color: #ccc;
     position: absolute;
     padding: 5px;
-    background-color: #093168;
+    background-color: rgba(9, 49, 104, .85);
 }
