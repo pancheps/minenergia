@@ -112,7 +112,7 @@
 
 @media (max-width: 768px) {
   .page .post, .page .post-image {
-    height: 450px; }
+    height: 300px; }
   .page .page-content figure,
   .page .page-content .wp-block-image {
     margin: 10px 0; }
@@ -123,12 +123,12 @@
 
 @media (min-width: 768px) {
   .page .post, .page .post-image {
-    height: 430px; } }
+    height: 300px; } }
 
 @media (min-width: 992px) {
   .page .post, .page .post-image {
-    height: 450px; } }
+    height: 300px; } }
 
 @media (min-width: 1200px) {
   .page .post, .page .post-image {
-    height: 450px; } }
+    height: 300px; } }

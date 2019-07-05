@@ -26,7 +26,7 @@ if ( ! function_exists( 'endewp_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'endewp' ),
+			esc_html_x( '%s', 'post date', 'endewp' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 

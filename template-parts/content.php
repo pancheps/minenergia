@@ -10,7 +10,7 @@
 ?>
 
 
-<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-8", "individual-post")); ?>>
+<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-6", "individual-post")); ?>>
 		<?php
 		if ( is_singular() ) : ?>
 <div class="page-content">
@@ -20,8 +20,13 @@
 			</div>
 		</div>
 			<?php
-		else :
+		else : ?>
+		<div class="post-thumbnail">
+		<?php
 			endewp_post_thumbnail();
+			?>
+		</div>
+			<?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
@@ -39,7 +44,7 @@
 	<div class="el-card__body">
 		<?php
 		if ( !is_singular() )
-		echo the_excerpt_max_charlength(120);
+		echo the_excerpt_max_charlength(100);
 		else 
 			the_content();
 

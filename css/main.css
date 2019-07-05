@@ -196,3 +196,11 @@ hr {
 .lefty p, .lefty img{
     padding-left: 15px;
 }
+
+div.post-thumbnail {
+    height: 170px;
+}
+
+div.post-thumbnail img {
+    height: 100%;
+}

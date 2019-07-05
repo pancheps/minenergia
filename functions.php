@@ -174,7 +174,7 @@ function the_excerpt_max_charlength($charlength) {
 		} else {
 			echo $subex;
 		}
-		echo '[...]';
+		echo '<a href="' . get_the_permalink() . '">Leer más..</a>';
 	} else {
 		echo $excerpt;
 	}
@@ -185,12 +185,12 @@ add_action( 'after_setup_theme', 'the_excerpt_max_charlength' );
  * Limits the title lentgh
  */
 function max_title_length( $title ) {
-	$max = 30;
-	if( strlen( $title ) > $max ) {
-		return substr( $title, 0, $max ). " ...";
-	} else {
-		return $title;
-	}
+	// $max = 30;
+	// if( strlen( $title ) > $max ) {
+	// 	return substr( $title, 0, $max ). " ...";
+	// } else {
+	 	return $title;
+	// }
 }
 add_filter( 'the_title', 'max_title_length');
 

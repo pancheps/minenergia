@@ -32,36 +32,36 @@ get_header();
 				</div>
 				<?php
 			endif; ?>
-			<div class="page-content">
+			<div>
 			<?php
 			$counter = 0;
-			$postPerRow = 3;
+			$postPerRow = 4;
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 				$categories = get_the_category();
 				if ($categories[0]->name == "Noticias") {
-				if ($counter < $postPerRow) {
-					if ($counter == 0) {
+					if ($counter < $postPerRow) {
+						if ($counter == 0) {
+							?>
+							<div class="p-box el-row">
+							<?php
+						}
+						$counter ++;
+					} 
+					
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
+					if ($counter >= $postPerRow) {
 						?>
-						<div class="p-box el-row">
+						</div>
 						<?php
+						$counter = 0;
 					}
-					$counter ++;
-				} 
-				
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-				if ($counter >= $postPerRow) {
-					?>
-					</div>
-					<?php
-					$counter = 0;
-				}
 				}
 			endwhile;
 			?>
