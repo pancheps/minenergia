@@ -6,7 +6,7 @@
   .page .el-card {
     border-radius: 0; }
   .page .post {
-    height: 400px;
+    height: 300px;
     position: relative; }
   .page .post-details {
     position: absolute;
@@ -132,3 +132,8 @@
 @media (min-width: 1200px) {
   .page .post, .page .post-image {
     height: 350px; } }
+
+.home.page .post {
+  height: 300px;
+}
+  
