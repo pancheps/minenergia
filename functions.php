@@ -159,6 +159,23 @@ function parameter_queryvars( $qvars )
 }
 
 /**
+ * Gets the total count of posts for the provided category
+ */
+function cat_post_count($category_name)
+{
+	$category_id = get_cat_ID($category_name);
+	return get_category($category_id)->count;
+}
+
+/**
+ * Gets the page for the posts
+ */
+function get_news_url()
+{
+	return get_permalink(get_option('page_for_posts'));
+}
+
+/**
  * Limits the excerpt length
  */
 function the_excerpt_max_charlength($charlength, $readmore = true) {

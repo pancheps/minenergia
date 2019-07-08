@@ -19,8 +19,14 @@ get_header();
 		<section class="container page" <?php post_class(array("container", "page")); ?>>
 
 		<?php
-		
-		if ( have_posts() ) :
+		$per_page = 3;
+		$the_query = new WP_Query( array( 
+			'posts_per_page' => $per_page, 
+			'category_name' => 'Noticias', 
+			'offset' => isset($_GET['pagina']) ? ($_GET['pagina'] - 1) * $per_page : 0) 
+		);
+		$cat_posts = cat_post_count("Noticias");
+		if ( $the_query->have_posts() ) {
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
@@ -36,44 +42,76 @@ get_header();
 			<?php
 			$counter = 0;
 			$postPerRow = 4;
+			$total = 0;
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				$categories = get_the_category();
-				if ($categories[0]->name == "Noticias") {
-					if ($counter < $postPerRow) {
-						if ($counter == 0) {
-							?>
-							<div class="p-box el-row">
-							<?php
-						}
-						$counter ++;
-					} 
-					
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content', get_post_type() );
-					if ($counter >= $postPerRow) {
+			while ( $the_query->have_posts() ) :
+				$the_query->the_post();
+				if ($total >= $per_page)
+					break;
+				if ($counter < $postPerRow) {
+					if ($counter == 0) {
 						?>
-						</div>
+						<div class="p-box el-row">
 						<?php
-						$counter = 0;
 					}
+					$counter ++;
+				} 
+				
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content', get_post_type() );
+				$total ++;
+				if ($counter >= $postPerRow) {
+					?>
+					</div>
+					<?php
+					$counter = 0;
 				}
 			endwhile;
 			?>
 			</div>
 			<?php
-			echo paginate_links(array('prev_text' => '« Anterior', 'next_text' => 'Siguiente »'));
+			$start = (isset($_GET['pagina']) ) ? $_GET['pagina'] > 2 ? $_GET['pagina'] - 2 : 0 : 0;
+			//$end = (ceil($cat_posts / $per_page) - isset($_GET['pagina']) ? $_GET['pagina'] : 0 ) > 4 ? $_GET['pagina'] + 2 : ceil($cat_posts / $per_page);
+			$end = isset($_GET['pagina']) ? 
+				(ceil($cat_posts / $per_page) - $_GET['pagina']) > 2 ? 
+					$_GET['pagina'] + 2 : 
+					ceil($cat_posts / $per_page) : 
+				4;
+			if ($start > 0 && isset($_GET['pagina'])) {
+				echo "<a href='" . get_news_url() . "?pagina=" . ($_GET['pagina'] - 1) . "'>Anterior</a> ";
+			}
+			for ($i = $start + 1; $i <= $end; $i ++) { 
+				if (isset($_GET['pagina'])) {
+					if ($_GET['pagina'] == $i) {
+						echo "<span>" . ($i) . "</span> ";
+					}
+					else {
+						echo "<a href='" . get_news_url() . "?pagina=" . ($i) . "'>" . ($i) . "</a> ";
+					}
+				}
+				else {
+					if ($i == 1) {
+						echo "<span>" . ($i) . "</span> ";
+					}
+					else {
+						echo "<a href='" . get_news_url() . "?pagina=" . ($i) . "'>" . ($i) . "</a> ";
+					}
+				}
+			}
+			if (ceil($cat_posts / $per_page) > $end) {
+				echo "<a href='" . get_news_url() . "?pagina=" . ($_GET['pagina'] + 1) . "'>Siguiente</a> ";
+			}
+		}
 
-		else :
+		else 
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
+		
 		?>
 		<?php
 		if ( is_home() && ! is_front_page() ) :
