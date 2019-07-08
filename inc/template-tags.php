@@ -170,4 +170,26 @@ if ( ! function_exists( 'endewp_post_thumbnail' ) ) :
 		<?php
 		endif; // End is_singular().
 	}
+
 endif;
+
+if ( ! function_exists( 'endewp_post_image' )) {
+	function endewp_post_image() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+
+			?>
+
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+				<!-- <div class="legend">
+					<?php
+					//echo get_the_title();
+					?>
+				</div> -->
+			</div> <!-- .post-thumbnail -->
+
+		<?php
+	}
+}
