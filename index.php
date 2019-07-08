@@ -19,7 +19,7 @@ get_header();
 		<section class="container page" <?php post_class(array("container", "page")); ?>>
 
 		<?php
-		$per_page = 3;
+		$per_page = 8;
 		$the_query = new WP_Query( array( 
 			'posts_per_page' => $per_page, 
 			'category_name' => 'Noticias', 
@@ -71,6 +71,7 @@ get_header();
 					$counter = 0;
 				}
 			endwhile;
+			wp_reset_postdata();
 			?>
 			</div>
 			<?php
@@ -79,7 +80,7 @@ get_header();
 				(ceil($cat_posts / $per_page) - $_GET['pagina']) > 2 ? 
 					$_GET['pagina'] + 2 : 
 					ceil($cat_posts / $per_page) : 
-				4;
+				ceil($cat_posts / $per_page);
 			if ($start > 0 && isset($_GET['pagina'])) {
 				echo "<a href='" . get_news_url() . "?pagina=" . ($_GET['pagina'] - 1) . "'>Anterior</a> ";
 			}
