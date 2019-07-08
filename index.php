@@ -75,7 +75,6 @@ get_header();
 			</div>
 			<?php
 			$start = (isset($_GET['pagina']) ) ? $_GET['pagina'] > 2 ? $_GET['pagina'] - 2 : 0 : 0;
-			//$end = (ceil($cat_posts / $per_page) - isset($_GET['pagina']) ? $_GET['pagina'] : 0 ) > 4 ? $_GET['pagina'] + 2 : ceil($cat_posts / $per_page);
 			$end = isset($_GET['pagina']) ? 
 				(ceil($cat_posts / $per_page) - $_GET['pagina']) > 2 ? 
 					$_GET['pagina'] + 2 : 
