@@ -46,8 +46,9 @@ $cat_posts = get_posts(array('category' => $cat_id));
 			<div class="el-col el-col-24 el-col-sm-16">
 			<?php
 			if (!isset($_GET['subpId']) || $_GET['subpId'] == "") {
-				//the_content();
+				the_content();
 			}
+			else {
 				$term = term_exists( get_the_title($_GET['subpId']), 'category' );
 				if ( 0 !== $term && null !== $term ) {
 					$per_page = 8;
@@ -91,6 +92,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 				else {
 					echo get_post($_GET['subpId'])->post_content;
 				}
+			}
 			?>
 			</div>
 			<div class="pagination-row">
