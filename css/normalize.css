@@ -41961,7 +41961,6 @@ template {
 /* BEM
  -------------------------- */
 .el-container {
-  display: flex;
   flex-direction: row;
   flex: 1;
   flex-basis: auto;

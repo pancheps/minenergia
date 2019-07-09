@@ -120,8 +120,8 @@
   display: inline-block;
 }
 .opaque {
-    opacity: .2;
-    filter: alpha(opacity=20);
+    opacity: .5;
+    filter: alpha(opacity=50);
     transition: opacity .5s ease-in-out;
 }
 .opaque:hover {

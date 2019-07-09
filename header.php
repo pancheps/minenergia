@@ -25,7 +25,7 @@ $bgClasses = array("portal-bg-red", "portal-bg-yellow", "portal-bg-green", "port
 $classId = array_rand($bgClasses);
 $currClass = $bgClasses[$classId];
 ?>
-<body <?php body_class($currClass); ?>>
+<body <?php !is_front_page() ? body_class($currClass) : ""; ?>>
 
 	<div id="__nuxt" class="site">
 		<div id="__layout">

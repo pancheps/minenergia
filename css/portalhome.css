@@ -6,7 +6,6 @@
 /* Ubicación de la fuente, obligatoria */
 
 .portal-home {
-    background: transparent url(../img/home.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: 100%;

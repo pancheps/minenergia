@@ -25,6 +25,7 @@
     font-size: 0.8rem;
     line-height: 0.8rem;
     font-weight: 100;
+    text-shadow: 0 0 10px black;
 }
 
 .app-logo .app-logo-title:first-child {
