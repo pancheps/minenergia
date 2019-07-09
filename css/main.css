@@ -226,7 +226,20 @@ div.post-thumbnail img {
     top: 0;
     width: 50px;
     color: #ccc;
-    position: absolute;
+    position: relative;
+    margin: -173px 0 0;
+    padding: 5px;
+    text-decoration: none;
+    background-color: rgba(9, 49, 104, .85);
+}
+
+#main .thumbnail-date {
+    left: 20px;
+    top: 0;
+    width: 50px;
+    color: #ccc;
+    position: relative;
+    margin: -177px 0 0;
     padding: 5px;
     background-color: rgba(9, 49, 104, .85);
 }
