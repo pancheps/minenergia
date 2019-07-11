@@ -76,3 +76,16 @@
     height: 200px;
 }
 
+.flexmin {
+    display: flex;
+}
+
+.minicon {
+    font-size: 2em;
+    margin: 20px 0 0;
+}
+
+.entidades-logo {
+    display: flex;
+    justify-content: center;
+}

@@ -163,12 +163,12 @@ hr {
 .vicemin {
     text-align: center;
     height: 100px;
-    width: 50%;
+    flex-grow: 1;
     background-color: #093168;
     float: left;
     display: inline-table;
     vertical-align: middle;
-    line-height: 90px;
+    line-height: 30px;
 }
 
 .vicemin:hover {

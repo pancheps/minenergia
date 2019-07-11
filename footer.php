@@ -99,14 +99,21 @@ if( is_front_page() ) :
 	</div>
 </section>
 
-<section>
-	<div class="row-bg el-row">
-		<div class="vicemin">
-		<a href="#">VICEMINISTERIO DE ELECTRICIDAD Y ENERGÍAS ALTERNATIVAS</a>
-		</div>
-		<div class="vicemin">
-		<a href="#">VICEMINISTERIO DE ALTAS TECNOLOGÍAS ENERGÉTICAS</a>
-		</div>
+<section class="container page">
+	<div class="row-bg el-row flexmin">
+		<?php
+		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Vicemins') );
+		/* Start the Loop */
+		while ( $mins_query->have_posts() ) :
+			$mins_query->the_post();
+			?>
+			<div class="vicemin">
+			<a href="#"><i class="minicon <?php echo get_the_excerpt(); ?>"></i><p><?php the_title(); ?></p></a>
+			</div>
+			<?php
+		endwhile;
+		wp_reset_postdata();
+		?>
 	</div>
 </section>
 
@@ -115,11 +122,20 @@ if( is_front_page() ) :
 		<div class="text-center">
 			<h1>ENTIDADES BAJO TUICIÓN</h1>
 		</div>
-		<div class="half-footer righty">
-			<p><a href="#"><img src="<?php echo get_template_directory_uri() . '/img/tuicion/endeandina.png'; ?>" class="app-logo-img opaque" alt=""></a></p>
-		</div>
-		<div class="half-footer lefty">
-			<p><a href="#"><img src="<?php echo get_template_directory_uri() . '/img/tuicion/endetecnologias.png'; ?>" class="app-logo-img opaque" alt=""></a></p>
+		<div class="row-bg el-row entidades-logo">
+		<?php
+		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Tuicion') );
+		/* Start the Loop */
+		while ( $mins_query->have_posts() ) :
+			$mins_query->the_post();
+			?>
+			<div class="">
+			<p><a href="#"><img src="<?php the_post_thumbnail_url(); ?>" class="app-logo-img opaque" alt=""></a></p>
+			</div>
+			<?php
+		endwhile;
+		wp_reset_postdata();
+		?>
 		</div>
 	</div>
 </section>
