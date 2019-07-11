@@ -13,7 +13,7 @@ get_header();
             <div class="app-title">
                 <a href="<?php echo site_url(); ?>" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
                     <div class="app-logo">
-                        <div class="app-logo-title">Estado Plurinacional de Bolivia</div>
+                        <div class="app-logo-title"><?php echo get_bloginfo('description'); ?></div>
                         <img src="<?php echo get_template_directory_uri() . '/img/logo1.png'; ?>" class="" alt="">
                     </div>
                 </a>
