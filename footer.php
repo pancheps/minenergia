@@ -141,17 +141,32 @@ if( is_front_page() ) :
 </section>
 
 <section class="container page">
+<?php
+if ( ! is_admin() ) {
+	require_once( ABSPATH . 'wp-admin/includes/post.php' );
+}
+?>
+
 	<div class="row-bg el-row foot">
 	<div class="half-footer lefty">
 	<p>
+	<?php if ( post_exists("PIE_IZQUIERDO") ) :
+					echo get_the_post_thumbnail_url(post_exists("PIE_IZQUIERDO"));
+			else :
+	?>
 		<strong>CASA GRANDE DEL PUEBLO</strong> <br>
 		Piso 17 <br>
 		Calle Potosí esquina Calle Ayacucho, Zona Central<br>
 		La Paz, Bolivia
+			<?php endif; ?>
 	</p>
 	</div>
 	<div class="half-footer righty">
 		<p>
+		<?php if ( post_exists("PIE_DERECHO") ) :
+						get_the_content(post_exists("PIE_DERECHO"));
+				else :
+		?>
 		<strong>Edificio Ex BBA</strong> <br>
 		Av. Camacho N° 1413 esquina Calle Loayza<br>
 
@@ -160,6 +175,7 @@ if( is_front_page() ) :
 
 		<strong>Correo:</strong><br>
 		info@minenergias.gob.bo
+				<?php endif; ?>
 		</p>
 	</div>
 	</div>
