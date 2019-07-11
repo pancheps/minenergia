@@ -104,7 +104,7 @@ wp_reset_postdata();
 .cb-slideshow li div a { 
     font-size: 2em;
     margin-bottom: 50px;
-    line-height: 2em; 
+    line-height: 1em; 
     text-decoration: none;
     font-weight: 900;
     color: white;
