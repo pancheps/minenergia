@@ -263,6 +263,11 @@ div.post-thumbnail img {
     padding-left: 33%;
 }
 
+.pagination-news {
+    clear: both;
+    padding-left: 20px;
+}
+
 .post-thumbnail-padded {
     height: 171px;
     margin: 3px;

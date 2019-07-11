@@ -74,6 +74,7 @@ get_header();
 			wp_reset_postdata();
 			?>
 			</div>
+			<div class="pagination-news">
 			<?php
 			$start = (isset($_GET['pagina']) ) ? $_GET['pagina'] > 2 ? $_GET['pagina'] - 2 : 0 : 0;
 			$end = isset($_GET['pagina']) ? 
@@ -105,6 +106,9 @@ get_header();
 			if (ceil($cat_posts / $per_page) > $end) {
 				echo "<a href='" . get_news_url() . "?pagina=" . ($_GET['pagina'] + 1) . "'>Siguiente</a> ";
 			}
+			?>
+			</div>
+			<?php
 		}
 
 		else 
