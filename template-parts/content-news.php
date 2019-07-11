@@ -19,7 +19,7 @@
 	
 			?>
 
-	<div class="el-card__body">
+	<!-- <div class="el-card__body">
 		<?php
 
 		wp_link_pages( array(
@@ -27,6 +27,7 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div> -->
+	<!-- .entry-content -->
 </div><!-- #post-<?php the_ID(); ?> -->
 </a>
