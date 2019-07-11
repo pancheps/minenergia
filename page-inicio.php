@@ -14,7 +14,14 @@ get_header();
                 <a href="<?php echo site_url(); ?>" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
                     <div class="app-logo">
                         <div class="app-logo-title"><?php echo get_bloginfo('description'); ?></div>
-                        <img src="<?php echo get_template_directory_uri() . '/img/logo1.png'; ?>" class="" alt="">
+                        <?php 
+                        if ( ! is_admin() ) {
+                            require_once( ABSPATH . 'wp-admin/includes/post.php' );
+                        }
+                        ?>
+                        <img src="<?php echo post_exists("LOGO_PRINCIPAL") ?
+                        get_the_post_thumbnail_url(post_exists("LOGO_PRINCIPAL")) :
+                        get_template_directory_uri() . '/img/logo1.png'; ?>" class="" alt="">
                     </div>
                 </a>
             </div>
