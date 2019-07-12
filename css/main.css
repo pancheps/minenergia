@@ -199,11 +199,10 @@ hr {
 
 div.post-thumbnail {
     height: 170px;
-    overflow: hidden;
 }
 
 div.post-thumbnail img {
-    width: 100%;
+    height: 100%;
 }
 
 .entry-title a, .posted-on a {
