@@ -45,6 +45,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 
 			<div class="el-col el-col-24 el-col-sm-16">
 			<?php
+			$ispostlist = false;
 			if (!isset($_GET['subpId']) || $_GET['subpId'] == "") {
 				the_content();
 			}
@@ -75,6 +76,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 									<?php
 								}
 								$counter ++;
+								$ispostlist = true;
 							} 
 							get_template_part( 'template-parts/content-image', get_post_type() );
 							$total ++;
@@ -95,6 +97,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 			}
 			?>
 			</div>
+			<?php if ($ispostlist) : ?>
 			<div class="pagination-row">
 			<?php
 			$start = (isset($_GET['pagina']) ) ? $_GET['pagina'] > 2 ? $_GET['pagina'] - 2 : 0 : 0;
@@ -129,6 +132,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 			}	
 		?>
 		</div>
+		<?php endif; ?>
 		</div>
 		<?php else : ?>
 		<div class="p-box el-row">
