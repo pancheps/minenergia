@@ -88,7 +88,8 @@
     margin: 0 0 15px; }
   .page-content a {
     color: #024f9b;
-    text-decoration: none; }
+    text-decoration: none; 
+    font-size: .8em;}
     .page-content a:hover {
       text-decoration: underline; }
   .page-content iframe {
