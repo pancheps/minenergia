@@ -203,6 +203,7 @@ div.post-thumbnail {
 
 div.post-thumbnail img {
     height: 100%;
+    object-fit: cover;
 }
 
 .entry-title a, .posted-on a {
