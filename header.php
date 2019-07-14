@@ -37,19 +37,16 @@ $currClass = $bgClasses[$classId];
 								<div id="menuItemsRow" class="row-bg relative el-row is-justify-space-between el-row--flex"><button type="button" id="main-menu-toggle" class="el-button app-menu__btn-open-menu app-btn__link el-button--text">
 									
 									<span><span class="caret-menu"><span></span> <span></span> <span></span></span></span></button>
-									<?php
-										if ( !is_front_page() ) :
-									?>
-									<div class="app-logo-container">
+									
+									<div id="main-hidden" class="app-logo-container <?php
+										if ( is_front_page() ) echo "main-hidden";
+									?>">
 										<div class="app-title">
 											<a href="<?php echo site_url(); ?>" class="app-logo-link nuxt-link-exact-active nuxt-link-active">
 											<img src="<?php echo get_template_directory_uri() . '/img/logo1.png'; ?>" class="app-logo-img" alt="">
 											</a>
 										</div>
 									</div>
-									<?php
-										endif;
-									?>
 									<div class="app-b-servicio">
 										<div class="b-servicio"><span id="top-menu-servicios" onclick="javascript:toggleServices()" class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 											<ul id="top-services-list" class="b-servicio-opciones">

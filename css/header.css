@@ -119,6 +119,9 @@
   width: 160px;
   display: inline-block;
 }
+.main-hidden {
+    display: none;
+}
 .opaque {
     opacity: .5;
     filter: alpha(opacity=50);

@@ -351,6 +351,12 @@ div.post-thumbnail img {
     .modal-content {
       width: 100%;
     }
+    .vicemin {
+        height: 190px;
+    }
+    .half-footer {
+        font-size: 0.8em
+    }
   }
 
   .more-main {
