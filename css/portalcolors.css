@@ -28,6 +28,7 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: top center;
+    background-attachment: fixed;
 }
 
 .portal-default .el-header .divider {
