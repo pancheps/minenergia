@@ -10,7 +10,7 @@
 ?>
 
 <a href="<?php the_permalink();?>">
-<div id="post-<?php the_ID(); ?>" <?php  post_class(array("el-col", "el-col-24", "el-col-sm-6", "individual-post")); ?>>
+<div id="post-<?php the_ID(); ?>" <?php  post_class(array("el-col", "el-col-24", "el-col-sm-5", "individual-post")); ?>>
 		
 			<?php
 		

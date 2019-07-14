@@ -6,7 +6,7 @@
   .page .el-card {
     border-radius: 0; }
   .page .post {
-    height: 300px;
+    height: 260px;
     position: relative; }
   .page .post-details {
     position: absolute;
@@ -118,21 +118,21 @@
   .page .page-content .wp-block-image {
     margin: 10px 0; }
   .page .page-img-main {
-    height: 300px; }
+    height: 260px; }
   .page .page-title h1 {
     font-size: 1.5rem; } }
 
 @media (min-width: 768px) {
   .page .post, .page .post-image {
-    height: 400px; } }
+    height: 260px; } }
 
 @media (min-width: 992px) {
   .page .post, .page .post-image {
-    height: 375px; } }
+    height: 260px; } }
 
 @media (min-width: 1200px) {
   .page .post, .page .post-image {
-    height: 375px; } }
+    height: 260px; } }
 
 .home.page .post {
   height: 300px;

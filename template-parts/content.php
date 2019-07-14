@@ -10,7 +10,7 @@
 ?>
 
 
-<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-6", "individual-post")); ?>>
+<div id="post-<?php the_ID(); ?>" <?php if ( !is_singular() ) post_class(array("el-col", "el-col-24", "el-col-sm-5", "individual-post")); ?>>
 		<?php
 		if ( is_singular() ) : ?>
 <div class="page-content">
@@ -37,7 +37,7 @@
 	<div class="el-card__body">
 		<?php
 		if ( !is_singular() )
-		echo the_excerpt_max_charlength(75);
+		echo "";//the_excerpt_max_charlength(75);
 		else {
 			if ( 'post' === get_post_type() ) :
 				?>
