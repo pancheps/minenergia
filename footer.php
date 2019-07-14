@@ -171,10 +171,10 @@ if ( ! is_admin() ) {
 		<strong>Edificio Ex BBA</strong> <br>
 		Av. Camacho N° 1413 esquina Calle Loayza<br>
 
-		<strong>Teléfono:</strong><br>
+		<strong><img src="<?php echo bloginfo('template_url') ?>/img/resources/phone-icon-256.png" height="20px" width="20px"></strong><br>
 		(591) - 2 - 2188800<br>
 
-		<strong>Correo:</strong><br>
+		<strong><img src="<?php echo bloginfo('template_url') ?>/img/resources/email-icon.png" height="20px" width="20px"></strong><br>
 		info@minenergias.gob.bo
 				<?php endif; ?>
 		</p>
