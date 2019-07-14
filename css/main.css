@@ -352,3 +352,8 @@ div.post-thumbnail img {
       width: 100%;
     }
   }
+
+  .more-main {
+      width: 100%;
+      text-align: right;
+  }

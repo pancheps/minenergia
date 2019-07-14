@@ -96,6 +96,7 @@ if( is_front_page() ) :
 	endwhile;
 	wp_reset_postdata();
 	?>
+	<div class="more-main"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Más noticias</a></div>
 	</div>
 </section>
 
