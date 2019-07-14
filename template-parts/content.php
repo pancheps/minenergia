@@ -30,15 +30,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				if ( is_singular() )
-					endewp_posted_on();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+ ?>
 
 	<?php  ?>
 
@@ -46,8 +38,18 @@
 		<?php
 		if ( !is_singular() )
 		echo the_excerpt_max_charlength(75);
-		else 
+		else {
+			if ( 'post' === get_post_type() ) :
+				?>
+				<div class="entry-meta">
+					<?php
+					if ( is_singular() )
+						endewp_posted_on();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif;
 			the_content();
+		}
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'endewp' ),
@@ -58,5 +60,6 @@
 	<?php
 		if ( is_singular() ) : ?>
 </div>
+<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Regresar a Noticias</a>
 		<?php endif; ?>
 </div><!-- #post-<?php the_ID(); ?> -->
