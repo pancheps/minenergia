@@ -45,6 +45,8 @@ wp_reset_postdata();
         </div>  
     </section>
 </main>
+<div id="sectionslider">
+</div>
 <div id="slider-news-title">
     <a id="slider-news-title-anchor" href="<?php echo $links[0]; ?>"><?php echo $titles[0]; ?></a>
 </div>
@@ -63,13 +65,16 @@ wp_reset_postdata();
     var titles = ["<?php echo $links[0]; ?>", "<?php echo $links[1]; ?>", "<?php echo $links[2]; ?>", "<?php echo $links[3]; ?>", "<?php echo $links[4]; ?>", ];
     var linkstext = ["<?php echo $titles[0]; ?>", "<?php echo $titles[1]; ?>", "<?php echo $titles[2]; ?>", "<?php echo $titles[3]; ?>", "<?php echo $titles[4]; ?>", ];
     var counter = 0;
-    var slider = document.getElementById("__nuxt");
+    var slider = document.getElementById("sectionslider");
     var newslink = document.getElementById("slider-news-title-anchor");
     $(slider).css({'background-image': "url('" + imgUrls[0] + "')", 'background-size': 'cover', 'background-position': 'center'});
     function MyFunc() {
-        $(slider).css({'background-image': "url('" + imgUrls[counter % 5] + "')", 'background-size': 'cover', 'background-position': 'center'});
-        $(newslink).attr('href', titles[counter % 5]);
-        $(newslink).text(linkstext[counter % 5]);
+        $(slider).stop().animate({opacity: 0},1000,function(){
+            $(this).css({'background-image': "url('" + imgUrls[counter % 5] + "')"})
+               .animate({opacity: 1},{duration:1000});
+            $(newslink).attr('href', titles[counter % 5]);
+            $(newslink).text(linkstext[counter % 5]);
+        });
         counter++
     }
     var myTimer = setInterval(MyFunc, 6000);
