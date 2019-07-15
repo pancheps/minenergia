@@ -363,3 +363,32 @@ div.post-thumbnail img {
       width: 100%;
       text-align: right;
   }
+
+.bullets {
+    width:98vw; 
+    color:white; 
+    top:90vh; 
+    position:absolute; 
+    text-align:center
+}
+.bullets span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+#slider-news-title {
+    position: absolute;
+    bottom: 80px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#slider-news-title-anchor {
+    font-size: 2em;
+    margin-bottom: 50px;
+    line-height: 1em;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 10px black;
+}

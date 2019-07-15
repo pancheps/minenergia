@@ -190,4 +190,8 @@
     margin-bottom: 10px;
 }
 }
-
+@media (max-width: 1250px) {
+  .individual-post {
+    margin: 5px 15px 0 15px;
+  }
+}
