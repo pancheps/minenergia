@@ -194,4 +194,7 @@
   .individual-post {
     margin: 5px 15px 0 15px;
   }
+  .individual-post h2 a {
+    font-size: .85em;
+  }
 }
