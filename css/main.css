@@ -400,12 +400,17 @@ div.post-thumbnail img {
   }
   @media only screen and (max-width: 400px){
     #sectionslider {
-        margin-top: -43.5vh; 
+        margin-top: -290px; 
     }
   }
- @media only screen and (min-width: 400px) and (max-width: 900px){
+  @media only screen and (min-width: 400px) and (max-width: 700px){
     #sectionslider {
-        margin-top: -40.8vh; 
+        margin-top: -300px; 
+    }
+  }
+  @media only screen and (min-width: 700px){
+    #sectionslider {
+        margin-top: -303px; 
     }
   }
 
