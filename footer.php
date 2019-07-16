@@ -107,13 +107,16 @@ if( is_front_page() ) :
 		/* Start the Loop */
 		while ( $mins_query->have_posts() ) :
 			$mins_query->the_post();
-			?>
-			<div class="vicemin">
-			<a href="#"><i class="minicon <?php echo get_the_excerpt(); ?>"></i><p><?php the_title(); ?></p></a>
-			</div>
-			<?php
+			$viceminsTitles[] = get_the_title();
+			$viceminsIcons[] = get_the_excerpt();
 		endwhile;
 		wp_reset_postdata();
+		for ($i=0; $i < count($viceminsTitles); $i++) { ?>
+			<div class="vicemin" style="width: <?php echo (98 / count($viceminsTitles)); ?>%">
+			<a href="#"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
+			</div>
+		<?php
+		}
 		?>
 	</div>
 </section>
