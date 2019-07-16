@@ -354,7 +354,7 @@ div.post-thumbnail img {
 .bullets {
     width:98vw; 
     color:white; 
-    top:90vh; 
+    bottom: 60px; 
     position:absolute; 
     text-align:center
 }
