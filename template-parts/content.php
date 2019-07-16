@@ -32,7 +32,7 @@
 
  ?>
 
-	<?php  ?>
+	<?php  if (! is_home() ) :?>
 
 	<div class="el-card__body">
 		<?php
@@ -58,6 +58,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php
+		endif;
 		if ( is_singular() ) : ?>
 </div>
 <div class="more-main"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Regresar a Noticias</a></div>
