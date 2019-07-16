@@ -60,6 +60,6 @@
 	<?php
 		if ( is_singular() ) : ?>
 </div>
-<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Regresar a Noticias</a>
+<div class="more-main"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Regresar a Noticias</a></div>
 		<?php endif; ?>
 </div><!-- #post-<?php the_ID(); ?> -->
