@@ -85,6 +85,16 @@ wp_reset_postdata();
         clearInterval(myTimer);
         myTimer = setInterval(MyFunc, 6000);
     }
+
+    var win = window,
+    docEl = document.documentElement,
+    logo = document.getElementById('main-hidden');
+
+    win.onscroll = function(){
+    var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
+    logo.style.display =  sTop > 200 ? "block":"none" ;
+    };
+
 </script>
 <?php
 get_footer();

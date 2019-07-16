@@ -25,12 +25,3 @@ window.onload = function() {
     document.getElementById("main-menu-toggle").onclick = toggleNav;
     document.getElementById("top-menu-servicios").onclick = toggleServices;
 }
-
-var win = window,
-docEl = document.documentElement,
-logo = document.getElementById('main-hidden');
-
-win.onscroll = function(){
-var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
-logo.style.display =  sTop > 200 ? "block":"none" ;
-};
