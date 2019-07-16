@@ -164,6 +164,7 @@ hr {
     text-align: center;
     height: 100px;
     flex-grow: 1;
+    -webkit-flex-grow: 1;
     background-color: #093168;
     float: left;
     display: inline-table;

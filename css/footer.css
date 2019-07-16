@@ -78,6 +78,10 @@
 
 .flexmin {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
 }
 
 .minicon {
