@@ -31,7 +31,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 						<li>
 							<a href="<?php echo get_permalink(get_the_ID()) . "?subpId=" . $value->ID; ?>">
 								<span>
-									<i class="glyphicon glyphicon-play">&#9654;</i>
+									<i class="glyphicon glyphicon-play">&#9632;</i>
 								</span> <?php echo $value->post_title; ?>
 							</a>
 						</li>
