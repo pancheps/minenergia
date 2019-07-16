@@ -169,6 +169,7 @@ hr {
     display: inline-table;
     vertical-align: middle;
     line-height: 30px;
+    margin: 0 .5px 15px;
 }
 
 .vicemin:hover {
@@ -348,9 +349,16 @@ div.post-thumbnail img {
   
   .more-main {
       width: 100%;
-      text-align: right;
+      text-align: center;
+      padding: 20px 0 20px;
   }
-
+.more-main a {
+    padding: 5px;
+    background-color: #194178;
+    color: #e7e7e7;
+    text-decoration: none;
+    border-radius: 5px;
+}
 .bullets {
     width:98vw; 
     color:white; 
