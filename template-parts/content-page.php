@@ -43,7 +43,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 				</div>
 			</div>
 
-			<div class="el-col el-col-24 el-col-sm-16">
+			<div class="el-col el-col-24 el-col-sm-16 padded">
 			<?php
 			$ispostlist = false;
 			if (!isset($_GET['subpId']) || $_GET['subpId'] == "") {
