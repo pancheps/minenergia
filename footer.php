@@ -111,12 +111,14 @@ if( is_front_page() ) :
 			$viceminsIcons[] = get_the_excerpt();
 		endwhile;
 		wp_reset_postdata();
-		for ($i=0; $i < count($viceminsTitles); $i++) { ?>
-			<div class="vicemin" style="width: <?php echo (98 / count($viceminsTitles)); ?>%">
-			<a href="#"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
-			</div>
-		<?php
-		}
+		if (is_array($viceminsTitles)) :
+			for ($i=0; $i < count($viceminsTitles); $i++) { ?>
+				<div class="vicemin" style="width: <?php echo (98 / count($viceminsTitles)); ?>%">
+				<a href="#"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
+				</div>
+			<?php
+			}
+		endif;
 		?>
 	</div>
 </section>
