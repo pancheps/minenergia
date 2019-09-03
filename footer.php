@@ -103,7 +103,7 @@ if( is_front_page() ) :
 <section class="container page">
 	<div class="row-bg el-row flexmin">
 		<?php
-		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Vicemins') );
+		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Viceministerios') );
 		/* Start the Loop */
 		while ( $mins_query->have_posts() ) :
 			$mins_query->the_post();
@@ -111,10 +111,12 @@ if( is_front_page() ) :
 			$viceminsIcons[] = get_the_excerpt();
 		endwhile;
 		wp_reset_postdata();
+		$cat_id = get_cat_ID("Viceministerios");
+		$cat_posts = get_posts(array('category' => $cat_id));		
 		if (is_array($viceminsTitles)) :
 			for ($i=0; $i < count($viceminsTitles); $i++) { ?>
 				<div class="vicemin" style="width: <?php echo (98 / count($viceminsTitles)); ?>%">
-				<a href="#"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
+				<a href="<?php echo get_permalink(get_page_by_title( 'Viceministerios' )) . "?subpId=" . $cat_posts[$i]->ID; ?>"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
 				</div>
 			<?php
 			}
