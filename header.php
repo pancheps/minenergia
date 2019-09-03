@@ -71,9 +71,9 @@ $currClass = $bgClasses[$classId];
 												<li class="b-servicio-item"><button type="button" title="Correo electrónico" class="el-button app-btn__link el-button--text">
 														<i class="icon-link"></i>
 														</button></li>
-												<li class="b-servicio-item"><button type="button" title="Whatsapp" class="el-button app-btn__link el-button--text">
+												<!-- <li class="b-servicio-item"><button type="button" title="Whatsapp" class="el-button app-btn__link el-button--text">
 														<i class="icon-whatsapp"></i>
-														</button></li>
+														</button></li> -->
 												<!-- <li class="b-servicio-item"><button type="button" title="Messenger" class="el-button app-btn__link el-button--text">
 														<i class="icon-messenger"></i>
 														</button></li> -->
