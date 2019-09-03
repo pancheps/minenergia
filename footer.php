@@ -23,10 +23,10 @@
 			<div class="app-footer-servicio">
 				<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 					<ul class="b-servicio-opciones">
-						<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text">
+						<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text" onclick="location.href='https://www.facebook.com/MinEnergias/'">
 								<i class="icon-facebook"></i>
 								</button></li>
-						<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text">
+						<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text" onclick="location.href='https://twitter.com/MinEnergia'">
 								<i class="icon-twitter"></i>
 								</button></li>
 						<!-- <li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">
@@ -41,7 +41,7 @@
 						<li class="b-servicio-item"><button type="button" title="Teléfono" class="el-button app-btn__link el-button--text">
 								<i class="icon-phone"></i>
 								</button></li> -->
-						<li class="b-servicio-item"><button type="button" title="Correo electrónico" class="el-button app-btn__link el-button--text">
+						<li class="b-servicio-item"><button type="button" title="Correo electrónico" class="el-button app-btn__link el-button--text" onclick="location.href='mailto:info@minenergias.gob.bo'">
 								<i class="icon-link"></i>
 								</button></li>
 						<!-- <li class="b-servicio-item"><button type="button" title="Whatsapp" class="el-button app-btn__link el-button--text">
