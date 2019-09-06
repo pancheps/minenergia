@@ -15,7 +15,7 @@
 	<div class="app-footer <?php if ( !is_home()) echo ".app-footer-no-home"; ?>">
 		<div class="row-bg relative el-row is-justify-space-between el-row--flex">
 			<div>
-				<div class="divider ml-0"></div> <a href="/en/contacto" class="">
+				<div class="divider ml-0"></div> <a href="<?php echo get_page_link(get_page_by_title("Contacto")->ID); ?>" class="">
 					Contacto
 				</a>
 				<div class="divider"></div>
