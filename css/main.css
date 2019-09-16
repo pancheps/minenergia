@@ -308,6 +308,13 @@ div.post-thumbnail img {
     max-width: 700px;
   }
   
+  .modal-content-vid {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 70%;
+  }
+
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
   #caption {
     margin: auto;

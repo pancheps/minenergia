@@ -78,7 +78,10 @@ $cat_posts = get_posts(array('category' => $cat_id));
 								$counter ++;
 								$ispostlist = true;
 							} 
-							get_template_part( 'template-parts/content-image', get_post_type() );
+							if(! has_category("Videos"))
+								get_template_part( 'template-parts/content-image', get_post_type() );
+							else
+								get_template_part( 'template-parts/content-video', get_post_type() );
 							$total ++;
 							if ($counter >= $postPerRow) {
 								?>
