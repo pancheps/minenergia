@@ -114,6 +114,134 @@ if( is_front_page() ) :
 	</div>
 </section>
 
+<section class="container page">
+	<div class="row-bg el-row">
+		<div class="el-col-24 el-col-sm-12">
+		<div class="text-center">
+			<h1>PUBLICACIONES</h1>
+		</div>
+		<div id="myPubModal" class="modal">
+			<span id="closePub" class="close">&times;</span>
+			<iframe class="modal-content-vid" id="pub01"
+			src="">
+			</iframe>   
+			<div id="pubCaption" style="color:white; text-align:center;"></div>
+		</div>
+		<?php
+		$pubs_query = new WP_Query( array( 'posts_per_page' => 3, 'category_name' => 'Publicaciones') );
+		/* Start the Loop */
+		while ( $pubs_query->have_posts() ) :
+			$pubs_query->the_post();
+			$pubsTitles[] = get_the_title();
+			$pubsIds[] = get_the_ID();
+			$pubsThumbnails[] = get_the_post_thumbnail();
+		endwhile;
+		wp_reset_postdata();
+		$cat_id = get_cat_ID("Publicaciones");
+		$cat_posts = get_posts(array('category' => $cat_id));		
+		if (is_array($pubsTitles)) :
+			for ($i=0; $i < count($pubsTitles); $i++) { ?>
+				<div id="<?php echo $pubsIds[$i]; ?>" style="width: 60%; margin:auto; text-align:center;">
+					<?php echo $pubsThumbnails[$i]; ?>
+					<div>
+						<?php echo $pubsTitles[$i]; ?>
+					</div>
+				</div>
+				<script>
+					var modalPub = document.getElementById("myPubModal");
+					var imgPub = document.getElementById("<?php echo $pubsIds[$i]; ?>").firstElementChild;
+					var modalPubContainer = document.getElementById("pub01");
+					var pubCaptionText = document.getElementById("pubCaption");
+					imgPub.onclick = function(){
+					modalPub.style.display = "block";
+					modalPubContainer.src = "<?php  print_r(reset(get_children(array('post_parent' => $pubsIds[$i])))->guid); ?>";
+					pubCaptionText.innerHTML = "<?php echo $pubsTitles[$i]; ?>";
+					}
+					var span = document.getElementById("closePub");
+					span.onclick = function() { 
+					modalPub.style.display = "none";
+					modalPubContainer.src = "";
+					}
+				</script>
+			<?php
+			}
+		endif;
+		$cat_multimedia_id = get_cat_ID("Multimedia");
+		$cat_multimedia_posts = get_posts(array('category' => $cat_multimedia_id));
+		for ($j=0; $j < count($cat_multimedia_posts); $j++) { 
+			if ($cat_multimedia_posts[$j]->post_title == 'Publicaciones') {
+				$pubs_post_id = $cat_multimedia_posts[$j]->ID;
+				break;
+			}
+		}
+		?>
+		<div class="more-main"><a href="<?php echo get_permalink(get_page_by_title( 'Multimedia' )) . "?subpId=" . $pubs_post_id; ?>">Más publicaciones</a></div>
+		</div>
+		<div class="el-col-24 el-col-sm-12">
+		<div class="text-center">
+			<h1>VIDEOS</h1>
+		</div>
+		<div id="myVidModal" class="modal">
+			<span id="closeVid" class="close">&times;</span>
+			<iframe class="modal-content-vid" id="vid01"
+			src="">
+			</iframe>   
+			<div id="vidCaption" style="color:white; text-align:center;"></div>
+		</div>
+		<?php
+		$vids_query = new WP_Query( array( 'posts_per_page' => 3, 'category_name' => 'Videos') );
+		/* Start the Loop */
+		while ( $vids_query->have_posts() ) :
+			$vids_query->the_post();
+			$vidsTitles[] = get_the_title();
+			$vidsIds[] = get_the_ID();
+			$vidsThumbnails[] = get_the_post_thumbnail(get_the_ID(), 'medium');
+			$vidsContent[] = get_the_content();
+		endwhile;
+		wp_reset_postdata();
+		$cat_id = get_cat_ID("Videos");
+		$cat_posts = get_posts(array('category' => $cat_id));		
+		if (is_array($vidsTitles)) :
+			for ($i=0; $i < count($vidsTitles); $i++) { ?>
+				<div id="<?php echo $vidsIds[$i]; ?>" style="width: 60%; margin:auto; text-align:center;">
+					<?php echo $vidsThumbnails[$i]; ?>
+					<div>
+						<?php echo $vidsTitles[$i]; ?>
+					</div>
+				</div>
+				<script>
+					var modalVid = document.getElementById("myVidModal");
+					var imgVid = document.getElementById("<?php echo $vidsIds[$i]; ?>").firstElementChild;
+					var modalVidContainer = document.getElementById("vid01");
+					var vidCaptionText = document.getElementById("vidCaption");
+					imgVid.onclick = function(){
+					modalVid.style.display = "block";
+					modalVidContainer.src = "https://www.youtube.com/embed/<?php echo wp_strip_all_tags($vidsContent[$i]); ?>";
+					vidCaptionText.innerHTML = "<?php echo $vidsTitles[$i]; ?>";
+					}
+					var span = document.getElementById("closeVid");
+					span.onclick = function() { 
+					modalVid.style.display = "none";
+					modalVidContainer.src = "";
+					}
+				</script>
+			<?php
+			}
+		endif;
+		$cat_multimedia_id = get_cat_ID("Multimedia");
+		$cat_multimedia_posts = get_posts(array('category' => $cat_multimedia_id));
+		for ($j=0; $j < count($cat_multimedia_posts); $j++) { 
+			if ($cat_multimedia_posts[$j]->post_title == 'Videos') {
+				$pubs_post_id = $cat_multimedia_posts[$j]->ID;
+				break;
+			}
+		}
+		?>
+		<div class="more-main"><a href="<?php echo get_permalink(get_page_by_title( 'Multimedia' )) . "?subpId=" . $pubs_post_id; ?>">Más videos</a></div>
+		</div>
+	</div>
+</section>
+
 <section>
 	<div class="row-bg el-row dark-grey">
 		<div class="text-center">
