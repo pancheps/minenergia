@@ -127,7 +127,7 @@ if( is_front_page() ) :
 			$mins_query->the_post();
 			?>
 			<div class="">
-			<p><a href="<?php echo wp_strip_all_tags(get_the_content()); ?>"><img src="<?php the_post_thumbnail_url(); ?>" class="app-logo-img opaque" alt=""></a></p>
+			<p><a href="<?php echo wp_strip_all_tags(get_the_content()); ?>" target="_blank"><img src="<?php the_post_thumbnail_url(); ?>" class="app-logo-img opaque" alt=""></a></p>
 			</div>
 			<?php
 		endwhile;
