@@ -8,12 +8,13 @@
 get_header();
 ?>
 <?php
-$the_query = new WP_Query( array( 'posts_per_page' => 5, 'category_name' => 'Portada') );
+$slideCounter = 3; //change the number of slides to present in the main page
+$the_query = new WP_Query( array( 'posts_per_page' => $slideCounter, 'category_name' => 'Portada') );
 $counter = 0;
 /* Start the Loop */
 while ( $the_query->have_posts() ) :
     $the_query->the_post();
-    if ($counter < 5) {
+    if ($counter < $slideCounter) {
         $imgs[] = get_the_post_thumbnail_url();
         $links[] = get_the_permalink();
         $titles[] = get_the_title();
@@ -46,11 +47,12 @@ wp_reset_postdata();
     </section>
 </main>
 <div id="sectionslider">
+    <div id="mainSlider" style="position:relative; top:25%; margin:auto; width: 50%; height: 50%; background-color:black; z-index:100">
+    </div>
 </div>
 <div id="slider-news-title">
     <a id="slider-news-title-anchor" href="<?php echo $links[0]; ?>"><?php echo $titles[0]; ?></a>
 </div>
-
 <div class="bullets">
     <?php
     for ($i=0; $i < $counter; $i++) { 
@@ -65,15 +67,15 @@ wp_reset_postdata();
     var titles = ["<?php echo $links[0]; ?>", "<?php echo $links[1]; ?>", "<?php echo $links[2]; ?>", "<?php echo $links[3]; ?>", "<?php echo $links[4]; ?>", ];
     var linkstext = ["<?php echo $titles[0]; ?>", "<?php echo $titles[1]; ?>", "<?php echo $titles[2]; ?>", "<?php echo $titles[3]; ?>", "<?php echo $titles[4]; ?>", ];
     var counter = 0;
-    var slider = document.getElementById("sectionslider");
+    var slider = document.getElementById("mainSlider");
     var newslink = document.getElementById("slider-news-title-anchor");
     $(slider).css({'background-image': "url('" + imgUrls[0] + "')", 'background-size': 'cover', 'background-position': 'center'});
     function MyFunc() {
         $(slider).stop().animate({opacity: 0},1000,function(){
-            $(this).css({'background-image': "url('" + imgUrls[counter % 5] + "')"})
+            $(this).css({'background-image': "url('" + imgUrls[counter % $slideCounter] + "')"})
                .animate({opacity: 1},{duration:1000});
-            $(newslink).attr('href', titles[counter % 5]);
-            $(newslink).text(linkstext[counter % 5]);
+            $(newslink).attr('href', titles[counter % $slideCounter]);
+            $(newslink).text(linkstext[counter % $slideCounter]);
         });
         counter++
     }

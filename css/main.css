@@ -341,7 +341,7 @@ div.post-thumbnail img {
   /* The Close Button */
   .close {
     position: absolute;
-    top: 65px;
+    top: 85px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
@@ -388,7 +388,7 @@ div.post-thumbnail img {
     color: #fff;
 }
 #slider-news-title-anchor {
-    font-size: 2em;
+    font-size: 1.3em;
     margin-bottom: 50px;
     line-height: 1em;
     text-decoration: none;
@@ -400,7 +400,9 @@ div.post-thumbnail img {
     height: 100vh; 
     position: relative; 
     margin-top: -45.3vh; 
-    z-index: -10
+    z-index: -10;
+    background-image: url("../img/fondo-principal.jpg");
+    background-size: cover;
 }
 
   /* 100% Image Width on Smaller Screens */
