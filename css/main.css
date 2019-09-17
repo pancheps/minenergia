@@ -41,8 +41,18 @@ body {
 
 .app-logo {
     margin: 0;
+    width: 240px;
 }
 
+#mainSlider {
+    position:relative; 
+    top:33%; 
+    margin:auto; 
+    width: 50%; 
+    height: 50%; 
+    background-color:black; 
+    z-index:100
+}
 .text-center {
     text-align: center !important;
 }
@@ -381,7 +391,7 @@ div.post-thumbnail img {
 }
 #slider-news-title {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 0px;
     width: 100%;
     text-align: center;
@@ -416,6 +426,10 @@ div.post-thumbnail img {
     .half-footer {
         font-size: 0.8em
     }
+    #mainSlider {
+        width: 100%; 
+    }
+    
   }
   @media only screen and (max-width: 400px){
     #sectionslider {

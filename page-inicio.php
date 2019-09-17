@@ -47,7 +47,7 @@ wp_reset_postdata();
     </section>
 </main>
 <div id="sectionslider">
-    <div id="mainSlider" style="position:relative; top:25%; margin:auto; width: 50%; height: 50%; background-color:black; z-index:100">
+    <div id="mainSlider">
     </div>
 </div>
 <div id="slider-news-title">
@@ -72,10 +72,10 @@ wp_reset_postdata();
     $(slider).css({'background-image': "url('" + imgUrls[0] + "')", 'background-size': 'cover', 'background-position': 'center'});
     function MyFunc() {
         $(slider).stop().animate({opacity: 0},1000,function(){
-            $(this).css({'background-image': "url('" + imgUrls[counter % $slideCounter] + "')"})
+            $(this).css({'background-image': "url('" + imgUrls[counter % <?php echo $slideCounter ?>] + "')"})
                .animate({opacity: 1},{duration:1000});
-            $(newslink).attr('href', titles[counter % $slideCounter]);
-            $(newslink).text(linkstext[counter % $slideCounter]);
+            $(newslink).attr('href', titles[counter % <?php echo $slideCounter ?> ]);
+            $(newslink).text(linkstext[counter % <?php echo $slideCounter ?>]);
         });
         counter++
     }
