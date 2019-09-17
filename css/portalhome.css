@@ -8,7 +8,6 @@
 .portal-home {
     background-size: cover;
     background-position: center center;
-    height: 100%;
 }
 
 .portal-home .el-main {
@@ -26,7 +25,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .portal-home .app-b-servicio {
