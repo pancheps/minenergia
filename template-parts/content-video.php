@@ -35,7 +35,7 @@ var modalVid = document.getElementById("vid01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
   modal.style.display = "block";
-  modalVid.src = "<?php echo wp_strip_all_tags(get_the_content()); ?>";
+  modalVid.src = "https://www.youtube.com/embed/<?php echo wp_strip_all_tags(get_the_content()); ?>";
   captionText.innerHTML = "<?php the_title(); ?>";
 }
 var span = document.getElementsByClassName("close")[0];
