@@ -13,10 +13,12 @@
 		
 			<?php
 			
-			endewp_post_image();
+      endewp_post_image();
 	
 			?>
-
+  <div style="text-align:center;">
+    <?php the_title(); ?>
+  </div>
 </div><!-- #post-<?php the_ID(); ?> -->
 
 
