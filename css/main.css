@@ -264,7 +264,6 @@ div.post-thumbnail img {
 .pagination-row {
     clear: both;
     padding-left: 33%;
-    padding-top: 10px;
 }
 
 .pagination-news {
@@ -274,7 +273,7 @@ div.post-thumbnail img {
 }
 
 .post-thumbnail-padded {
-    height: 171px;
+    height: 200px;
     margin: 3px;
 }
 
