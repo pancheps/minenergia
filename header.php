@@ -50,10 +50,10 @@ $currClass = $bgClasses[$classId];
 									<div class="app-b-servicio">
 										<div class="b-servicio"><span id="top-menu-servicios" onclick="javascript:toggleServices()" class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 											<ul id="top-services-list" class="b-servicio-opciones">
-												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text" onclick="location.href='https://www.facebook.com/MinEnergias/'">
+												<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text" onclick="window.open('https://www.facebook.com/MinEnergias/', '_blank')">
 														<i class="icon-facebook"></i>
 														</button></li>
-												<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text" onclick="location.href='https://twitter.com/MinEnergia'">
+												<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text" onclick="window.open('https://twitter.com/MinEnergias', '_blank')">
 														<i class="icon-twitter"></i>
 														</button></li>
 												<!-- <li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">

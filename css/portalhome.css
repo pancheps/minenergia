@@ -8,6 +8,8 @@
 .portal-home {
     background-size: cover;
     background-position: center center;
+    background-image: url("../img/fondo-principal.jpg");
+    z-index: -10;
 }
 
 .portal-home .el-main {
@@ -33,7 +35,7 @@
 }
 
 .el-main .container-home{
-      padding: 20px 100px;
+      padding: 0 100px 20px;
       margin: -40px 0 0;
       position: relative;
   }

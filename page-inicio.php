@@ -8,7 +8,7 @@
 get_header();
 ?>
 <?php
-$slideCounter = 3; //change the number of slides to present in the main page
+$slideCounter = 5; //change the number of slides to present in the main page
 $the_query = new WP_Query( array( 'posts_per_page' => $slideCounter, 'category_name' => 'Portada') );
 $counter = 0;
 /* Start the Loop */
