@@ -11,7 +11,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   padding-bottom: 50px;
-
+  width: 100%;  
   /* 2 */ }
 /* Sections
    ========================================================================== */
@@ -42195,7 +42195,6 @@ template {
 /* Break-point
 --------------------------*/
 .el-header {
-  padding: 0 20px;
   box-sizing: border-box;
   flex-shrink: 0; }
 /* BEM support Func

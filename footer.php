@@ -89,7 +89,7 @@ if( is_front_page() ) :
 	<div class="more-main"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Más noticias</a></div>
 </section>
 
-<section class="container page">
+<section class="container page" id="viceminsSection">
 	<div class="row-bg el-row flexmin">
 		<?php
 		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Viceministerios') );

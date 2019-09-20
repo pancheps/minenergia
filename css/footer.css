@@ -77,6 +77,9 @@
 }
 
 .flexmin {
+    width: 75%;
+    margin: auto;
+    padding: 15px 0 0;
     display: flex;
     display: -ms-flexbox;
     display: -webkit-box;
