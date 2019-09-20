@@ -76,6 +76,12 @@
     height: 200px;
 }
 
+.dark-blue {
+    background-color: rgb(19, 32, 107);
+    color: #fff;
+    height: 350px;
+}
+
 .flexmin {
     width: 75%;
     margin: auto;

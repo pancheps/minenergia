@@ -23,10 +23,10 @@
 			<div class="app-footer-servicio">
 				<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
 					<ul class="b-servicio-opciones">
-						<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text" onclick="location.href='https://www.facebook.com/MinEnergias/'">
+						<li class="b-servicio-item"><button type="button" title="Facebook" class="el-button app-btn__link el-button--text" onclick="window.open('https://www.facebook.com/MinEnergias/', '_blank')">
 								<i class="icon-facebook"></i>
 								</button></li>
-						<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text" onclick="location.href='https://twitter.com/MinEnergia'">
+						<li class="b-servicio-item"><button type="button" title="Twitter" class="el-button app-btn__link el-button--text" onclick="window.open('https://twitter.com/MinEnergias', '_blank')">
 								<i class="icon-twitter"></i>
 								</button></li>
 						<!-- <li class="b-servicio-item"><button type="button" title="Youtube" class="el-button app-btn__link el-button--text">
@@ -90,27 +90,37 @@ if( is_front_page() ) :
 </section>
 
 <section class="container page" id="viceminsSection">
-	<div class="row-bg el-row flexmin">
-		<?php
-		$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Viceministerios') );
-		/* Start the Loop */
-		while ( $mins_query->have_posts() ) :
-			$mins_query->the_post();
-			$viceminsTitles[] = get_the_title();
-			$viceminsIcons[] = get_the_excerpt();
-		endwhile;
-		wp_reset_postdata();
-		$cat_id = get_cat_ID("Viceministerios");
-		$cat_posts = get_posts(array('category' => $cat_id));		
-		if (is_array($viceminsTitles)) :
-			for ($i=0; $i < count($viceminsTitles); $i++) { ?>
-				<div class="vicemin" style="width: <?php echo (98 / count($viceminsTitles)); ?>%">
-				<a href="<?php echo get_permalink(get_page_by_title( 'Viceministerios' )) . "?subpId=" . $cat_posts[$i]->ID; ?>"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
-				</div>
+	<div class="row-bg el-row dark-blue">
+		<div class="text-center">
+			<h1>VICEMINISTERIOS</h1>
+		</div>
+		<div class="row-bg el-row flexmin">
 			<?php
-			}
-		endif;
-		?>
+			$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Viceministerios') );
+			/* Start the Loop */
+			while ( $mins_query->have_posts() ) :
+				$mins_query->the_post();
+				$viceminsTitles[] = get_the_title();
+				$viceminsIcons[] = get_the_excerpt();
+			endwhile;
+			wp_reset_postdata();
+			$cat_id = get_cat_ID("Viceministerios");
+			$cat_posts = get_posts(array('category' => $cat_id));		
+			if (is_array($viceminsTitles)) : ?>
+				<div style="margin:auto;">
+				<?php
+				for ($i=0; $i < count($viceminsTitles); $i++) { ?>
+					<div class="vicemin" >
+					<a href="<?php echo get_permalink(get_page_by_title( 'Viceministerios' )) . "?subpId=" . $cat_posts[$i]->ID; ?>"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
+					</div>
+				<?php
+				}
+				?>
+				</div>
+				<?php
+			endif;
+			?>
+		</div>
 	</div>
 </section>
 
