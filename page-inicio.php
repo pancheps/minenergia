@@ -71,9 +71,9 @@ wp_reset_postdata();
     var newslink = document.getElementById("slider-news-title-anchor");
     $(slider).css({'background-image': "url('" + imgUrls[0] + "')", 'background-size': 'cover', 'background-position': 'center'});
     function MyFunc() {
-        $(slider).stop().animate({opacity: 0},1000,function(){
+        $(slider).stop().animate({opacity: 0.3},500,function(){
             $(this).css({'background-image': "url('" + imgUrls[counter % <?php echo $slideCounter ?>] + "')"})
-               .animate({opacity: 1},{duration:1000});
+               .animate({opacity: 1},{duration:500});
             $(newslink).attr('href', titles[counter % <?php echo $slideCounter ?> ]);
             $(newslink).text(linkstext[counter % <?php echo $slideCounter ?>]);
         });
