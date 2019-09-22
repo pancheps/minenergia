@@ -51,7 +51,7 @@ body {
     width: 62%; 
     height: 53%; 
     background-color:black; 
-    z-index:100;
+    z-index:50;
     border-width: 2px;
     border-style: inset;
     border-color: initial;
@@ -184,6 +184,11 @@ hr {
     padding-left: 0;
 }
 
+.viceminContainer {
+    margin: auto; 
+    text-align: center;
+}
+
 .vicemin {
     text-align: center;
     height: 150px;
@@ -191,13 +196,11 @@ hr {
     font-size: 1.5em;
     font-weight: 700;
     background-color: white;
-    float: left;
     display: inline-table;
     vertical-align: middle;
     line-height: 30px;
-    margin: 0 15px 15px;
-    flex-grow: 1;
-    -webkit-flex-grow: 1;
+    margin: 20px 15px 35px;
+    display: inline-block;
     transition: background-color 1s;
     transition: color 1s;
 }
@@ -479,11 +482,14 @@ div.post-thumbnail img {
     }
     .vicemin {
         height: 190px;
+        margin: 20px 15% 35px;
     }
     .half-footer {
         font-size: 0.8em
     }
     #mainSlider {
+        top: 43%;
+        height: 45%; 
         width: 100%; 
     }
     

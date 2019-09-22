@@ -9,6 +9,7 @@
     background-size: cover;
     background-position: center center;
     background-image: url("../img/fondo-principal.jpg");
+    height: 100vh;
     z-index: -10;
 }
 

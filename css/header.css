@@ -21,6 +21,7 @@
   padding-right: 15px;
   border-bottom: 1px solid #eeeeee;
   font-weight: 300;
+  z-index: 100;
 }
 .app-menu__list {
   padding: 0;

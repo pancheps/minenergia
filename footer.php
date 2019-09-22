@@ -94,7 +94,7 @@ if( is_front_page() ) :
 		<div class="text-center">
 			<h1>VICEMINISTERIOS</h1>
 		</div>
-		<div class="row-bg el-row flexmin">
+		<div class="row-bg el-row">
 			<?php
 			$mins_query = new WP_Query( array( 'posts_per_page' => 20, 'category_name' => 'Viceministerios') );
 			/* Start the Loop */
@@ -107,7 +107,7 @@ if( is_front_page() ) :
 			$cat_id = get_cat_ID("Viceministerios");
 			$cat_posts = get_posts(array('category' => $cat_id));		
 			if (is_array($viceminsTitles)) : ?>
-				<div style="margin:auto; height: 150px;">
+				<div class="viceminContainer">
 				<?php
 				for ($i=0; $i < count($viceminsTitles); $i++) { ?>
 					<div class="vicemin" >
