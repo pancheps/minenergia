@@ -107,11 +107,15 @@ if( is_front_page() ) :
 			$cat_id = get_cat_ID("Viceministerios");
 			$cat_posts = get_posts(array('category' => $cat_id));		
 			if (is_array($viceminsTitles)) : ?>
-				<div style="margin:auto;">
+				<div style="margin:auto; height: 150px;">
 				<?php
 				for ($i=0; $i < count($viceminsTitles); $i++) { ?>
 					<div class="vicemin" >
-					<a href="<?php echo get_permalink(get_page_by_title( 'Viceministerios' )) . "?subpId=" . $cat_posts[$i]->ID; ?>"><i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i><p><?php echo $viceminsTitles[$i]; ?></p></a>
+					<a href="<?php echo get_permalink(get_page_by_title( 'Viceministerios' )) . "?subpId=" . $cat_posts[$i]->ID; ?>">
+						<i class="minicon <?php echo $viceminsIcons[$i]; ?>"></i>
+						<p class="subTitle">Viceministerio de </p>
+						<p style="top:-40px;"><?php echo $viceminsTitles[$i]; ?></p>
+					</a>
 					</div>
 				<?php
 				}

@@ -198,21 +198,49 @@ hr {
     margin: 0 15px 15px;
     flex-grow: 1;
     -webkit-flex-grow: 1;
+    transition: background-color 1s;
+    transition: color 1s;
 }
 
 .vicemin:hover, .vicemin:hover a {
     background-color: #194178;
     color: white;
+    transition: background-color 1s;
+    transition: color 1s;
 }
 
 .vicemin a {
     text-decoration: none;
     color: #396198;
+    transition: color 1s;
 }
 
 .vicemin a:hover {
     text-decoration: none;
     color: white;
+    transition: color 1s;
+}
+
+.vicemin a p {
+    margin-top: -32px;
+}
+
+.vicemin:hover .minicon {
+    background-color: #fff;
+    border: 10px solid #194178;
+    color: #194178;
+    transition: background-color 1s;
+    transition: color 1s;
+}
+
+.vicemin .minicon {
+    transition: background-color 1s;
+    transition: color 1s;
+}
+
+.subTitle {
+    font-size: .7em;
+    font-weight: lighter;
 }
 
 .half-footer {
@@ -278,6 +306,15 @@ div.post-thumbnail img {
     margin: -179px 0 0;
     padding: 5px;
     background-color: rgba(9, 49, 104, .85);
+}
+
+.iconsquare {
+    top: -35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    clear: both;
 }
 
 .fill .post-thumbnail, .fill img {
