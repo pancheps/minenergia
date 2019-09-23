@@ -46,7 +46,7 @@ body {
 
 #mainSlider {
     position:relative; 
-    top:33%; 
+    top:37%; 
     margin:auto; 
     width: 62%; 
     height: 53%; 
@@ -489,7 +489,7 @@ div.post-thumbnail img {
         font-size: 0.8em
     }
     #mainSlider {
-        top: 43%;
+        top: 39%;
         height: 45%; 
         width: 100%; 
     }
@@ -499,7 +499,11 @@ div.post-thumbnail img {
     #sectionslider {
         margin-top: -290px; 
     }
-  }
+    #mainSlider {
+        top: 48%;
+        height: 35%; 
+    }
+}
   @media only screen and (min-width: 400px) and (max-width: 700px){
     #sectionslider {
         margin-top: -300px; 

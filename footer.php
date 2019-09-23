@@ -270,7 +270,7 @@ if( is_front_page() ) :
 		while ( $mins_query->have_posts() ) :
 			$mins_query->the_post();
 			?>
-			<div class="">
+			<div class="iconTuition">
 			<p><a href="<?php echo wp_strip_all_tags(get_the_content()); ?>" target="_blank"><img src="<?php the_post_thumbnail_url(); ?>" class="app-logo-img opaque" alt=""></a></p>
 			</div>
 			<?php
