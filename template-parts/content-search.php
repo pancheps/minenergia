@@ -9,27 +9,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<div style="width: 90%; margin: auto;">
+		<div style="display:inline-block;">
+			<?php echo get_the_post_thumbnail(get_the_ID(), 'thumbnail'); ?>
+		</div>
+		<div style="display:inline-block; ">
+			<div>
+				<a href="<?php echo get_permalink(get_the_ID()); ?>"><?php the_title(); ?></a>
+			</div>
+			<div>
+				<?php the_excerpt_max_charlength(40); ?>
+			</div>
+		</div>
+	</div>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			endewp_posted_on();
-			endewp_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php endewp_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php endewp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->

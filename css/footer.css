@@ -106,3 +106,17 @@
     justify-content: center;
 }
 
+.locotoware {
+    position: fixed;
+    bottom: 35px;
+    font-size: .8em !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    width: 50px;
+    color: #008080 !important;
+    opacity: .6;
+}
+
+.locotoware:hover {
+    text-decoration: none !important;
+}

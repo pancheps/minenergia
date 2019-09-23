@@ -89,6 +89,7 @@ $currClass = $bgClasses[$classId];
 											'container'      => '',
 										) );
 										?>
+										<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 										<!--
 										<div class="divider app-lang-divider"></div>
 										<div class="app-lang el-dropdown">
