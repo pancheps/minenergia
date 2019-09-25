@@ -39,7 +39,7 @@ wp_reset_postdata();
                         ?>
                         <img src="<?php echo post_exists("LOGO_PRINCIPAL") ?
                         get_the_post_thumbnail_url(post_exists("LOGO_PRINCIPAL")) :
-                        get_template_directory_uri() . '/img/logo1.png'; ?>" class="" alt="">
+                        get_template_directory_uri() . '/img/logo1.png'; ?>" class="mainPageLogo" alt="">
                     </div>
                 </a>
             </div>
