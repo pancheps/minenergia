@@ -119,7 +119,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 					ceil($cat_posts / $per_page) : 
 				ceil($cat_posts / $per_page);
 			if ($start > 0 && isset($_GET['pagina'])) {
-				echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($_GET['pagina'] - 1) . "'>Anterior</a> ";
+				echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($_GET['pagina'] - 1) . "' class='pagIndex'>Anterior</a> ";
 			}
 			for ($i = $start + 1; $i <= $end; $i ++) { 
 				if (isset($_GET['pagina'])) {
@@ -127,7 +127,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 						echo "<span>" . ($i) . "</span> ";
 					}
 					else {
-						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "'>" . ($i) . "</a> ";
+						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "' class='pagIndex'>" . ($i) . "</a> ";
 					}
 				}
 				else {
@@ -135,12 +135,12 @@ $cat_posts = get_posts(array('category' => $cat_id));
 						echo "<span>" . ($i) . "</span> ";
 					}
 					else {
-						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "'>" . ($i) . "</a> ";
+						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "' class='pagIndex'>" . ($i) . "</a> ";
 					}
 				}
 			}
 			if (ceil($cat_posts / $per_page) > $end) {
-				echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($_GET['pagina'] + 1) . "'>Siguiente</a> ";
+				echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($_GET['pagina'] + 1) . "' class='pagIndex'>Siguiente</a> ";
 			}	
 		?>
 		</div>

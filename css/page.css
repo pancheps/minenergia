@@ -111,6 +111,13 @@
   #navbarCollapse .nav li {
     line-height: 2em;
   }
+.pagIndex {
+  padding: 6px 12px;
+  margin-left: -1px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
 
 @media (max-width: 768px) {
   .page .post, .page .post-image {
