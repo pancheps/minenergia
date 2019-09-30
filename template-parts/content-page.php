@@ -124,7 +124,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 			for ($i = $start + 1; $i <= $end; $i ++) { 
 				if (isset($_GET['pagina'])) {
 					if ($_GET['pagina'] == $i) {
-						echo "<span>" . ($i) . "</span> ";
+						echo "<span class='pagIndexCurrent'>" . ($i) . "</span> ";
 					}
 					else {
 						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "' class='pagIndex'>" . ($i) . "</a> ";
