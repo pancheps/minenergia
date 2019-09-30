@@ -87,7 +87,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 							else if (has_category("Publicaciones")) {
 								get_template_part( 'template-parts/content-pubs', get_post_type() );
 							}
-							else if (has_category("Auditoría Interna")) {
+							else {
 								$postPerRow = 1;
 								get_template_part( 'template-parts/content-audit', get_post_type());
 							}

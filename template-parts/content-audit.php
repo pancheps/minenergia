@@ -1,6 +1,6 @@
 
 
-<div id="post-<?php the_ID(); ?>" <?php  post_class(array("el-col", "el-col-24", "el-col-sm-5", "individual-post")); ?>>
+<div id="post-<?php the_ID(); ?>" >
 		
 			<?php
 		
@@ -20,4 +20,6 @@
 	</div> -->
 	<!-- .entry-content -->
 </div><!-- #post-<?php the_ID(); ?> -->
+<br>
+<hr>
 <br>
