@@ -78,12 +78,18 @@ $cat_posts = get_posts(array('category' => $cat_id));
 								$counter ++;
 								$ispostlist = true;
 							} 
-							if(has_category("Galería de Fotos"))
+							if(has_category("Galería de Fotos")) {
 								get_template_part( 'template-parts/content-image', get_post_type() );
-							else if(has_category("Videos"))
+							}
+							else if(has_category("Videos")) {
 								get_template_part( 'template-parts/content-video', get_post_type() );
+							}
 							else if (has_category("Publicaciones")) {
 								get_template_part( 'template-parts/content-pubs', get_post_type() );
+							}
+							else if (has_category("Auditoría Interna")) {
+								$postPerRow = 1;
+								get_template_part( 'template-parts/content-audit', get_post_type());
 							}
 							$total ++;
 							if ($counter >= $postPerRow) {
