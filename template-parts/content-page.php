@@ -132,7 +132,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 				}
 				else {
 					if ($i == 1) {
-						echo "<span>" . ($i) . "</span> ";
+						echo "<span class='pagIndexCurrent'>" . ($i) . "</span> ";
 					}
 					else {
 						echo "<a href='" . get_permalink() . "?subpId=" . $_GET['subpId'] . "&pagina=" . ($i) . "' class='pagIndex'>" . ($i) . "</a> ";
