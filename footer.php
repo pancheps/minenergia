@@ -20,6 +20,8 @@
 				</a>
 				<div class="divider"></div>
 				<?php echo do_shortcode("[ads-wpsitecount before='Visitantes: ' text='on']"); ?>
+				<div style="display: inline;"> <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+				</div>
 			</div>
 			<div class="app-footer-servicio">
 				<div class="b-servicio"><span class="b-servicio-titulo"><span class="b-services-short">BOLIVIA S.</span> <span class="b-services-long">Bolivia a tu servicio</span> <span class="b-service-two-points">:</span> <i class="b-icon-arrow-down el-icon-arrow-down"></i></span>
