@@ -377,6 +377,7 @@ div.post-thumbnail img {
   .modal-content {
     margin: auto;
     display: block;
+    margin-top: 10%;
     width: 80%;
     max-width: 700px;
   }

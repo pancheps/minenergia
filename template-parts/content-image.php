@@ -36,7 +36,7 @@ var captionText = document.getElementById("caption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src; 
-  captionText.innerHTML = "<?php the_title(); ?>";
+  captionText.innerHTML = '<?php echo "<strong>" . get_the_title() . "</strong>" . "<br>" . wp_strip_all_tags(get_the_content()); ?>';
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 

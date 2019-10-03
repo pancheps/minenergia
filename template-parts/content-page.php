@@ -18,7 +18,7 @@ $cat_posts = get_posts(array('category' => $cat_id));
 	<div class="page-content">
 		<div class="row1 row">
 			<div class=" title-base text-center col-md-12 ">
-			<?php the_title( '<h2>', '</h2>' ); ?>
+			<h2><?php echo get_the_title($_GET['subpId']) ?? "Multimedia"; ?></h2>
 			</div>
 		</div>
 		<?php if ($cat_id != 0) :?>
