@@ -45,10 +45,10 @@ body {
 
 #mainSlider {
     position:relative; 
-    top:34%; 
+    top:28%; 
     margin:auto; 
     width: 60%; 
-    height: 47%; 
+    height: 60%; 
     background-color:black; 
     z-index:50;
     border-width: 2px;
@@ -346,7 +346,7 @@ div.post-thumbnail img {
 }
 
 .post-thumbnail-padded {
-    height: 200px;
+    /* height: 200px;  */
     margin: 3px;
 }
 
