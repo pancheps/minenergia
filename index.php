@@ -13,6 +13,22 @@
  */
 
 get_header();
+if (!isset($_GET['pagina'])) {
+	$_GET['pagina'] = 1;
+}
+else {
+	if (is_nan($_GET['pagina'])) {
+		$_GET['pagina'] = 1;
+	}
+	if ($_GET['pagina'] < 1) {
+		$_GET['pagina'] = 1;
+	}
+	if ($_GET['pagina'] > $_GET['upperLimit']) {
+		$_GET['pagina'] = $_GET['upperLimit'];
+	}
+	}
+?>
+
 ?>
 
 	<main id="main" class="el-main">
@@ -72,10 +88,12 @@ get_header();
 				}
 			endwhile;
 			wp_reset_postdata();
+			$pageMax = ceil($cat_posts / $per_page);
 			?>
 			</div>
 			<div class="pagination-news">
 			<?php
+			/*
 			$start = (isset($_GET['pagina']) ) ? $_GET['pagina'] > 2 ? $_GET['pagina'] - 2 : 0 : 0;
 			$end = isset($_GET['pagina']) ? 
 				(ceil($cat_posts / $per_page) - $_GET['pagina']) > 2 ? 
@@ -106,7 +124,37 @@ get_header();
 			if (ceil($cat_posts / $per_page) > $end) {
 				echo "<a href='" . get_news_url() . "?pagina=" . ($_GET['pagina'] + 1) . "'>Siguiente</a> ";
 			}
+			*/
 			?>
+						<?php
+			if ($_GET['pagina'] == 1) {
+				$beforeMost = "javascript: void();";
+				$before = "javascript: void();";
+			}
+			else {
+				$beforeMost = home_url($_SERVER['REQUEST_URI']) . (isset($_GET['pagina']) ? "&" : "?") . "pagina=1&upperLimit=" . $pageMax;
+				$before = home_url($_SERVER['REQUEST_URI']) . (isset($_GET['pagina']) ? "&" : "?") ."pagina=" . ($_GET['pagina'] - 1) . "&upperLimit=" . $pageMax;
+			}
+			if ($_GET['pagina'] == $_GET[upperLimit]) {
+				$afterMost = "javascript: void();";
+				$after = "javascript: void();";
+			}
+			else {
+				$afterMost = home_url($_SERVER['REQUEST_URI']) . "&pagina=" . $pageMax . "&upperLimit=" . $pageMax;
+				$after = home_url($_SERVER['REQUEST_URI']) . "&pagina=" . ($_GET['pagina'] + 1) . "&upperLimit=" . $pageMax;
+			}
+			?>
+			<form action="<?php echo home_url($_SERVER['REQUEST_URI']) . "?pagina=$_GET[pagina]"; ?>">
+				<a href="<?php echo $beforeMost; ?>"><img width="20px" src="<?php echo get_template_directory_uri() . '/img/prevprev.png'; ?>"></a>
+				<a href="<?php echo $before; ?>"><img width="18px" src="<?php echo get_template_directory_uri() . '/img/prev.png'; ?>"></a>
+				<label>Página </label>
+				<input name="pagina" type="text" size="3" value="<?php echo $_GET['pagina']; ?>" >
+				<input name="upperLimit" type="hidden" value="<?php echo $pageMax; ?>" >
+				<label> de <?php echo $pageMax; ?></label>
+				<a href="<?php echo $after; ?>"><img width="18px" src="<?php echo get_template_directory_uri() . '/img/next.png'; ?>"></a>
+				<a href="<?php echo $afterMost; ?>"><img width="20px" src="<?php echo get_template_directory_uri() . '/img/nextnext.png'; ?>"></a>
+			</form>
+
 			</div>
 			<?php
 		}
