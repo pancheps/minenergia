@@ -140,8 +140,8 @@ else {
 				$after = "javascript: void();";
 			}
 			else {
-				$afterMost = home_url($_SERVER['REQUEST_URI']) . "&pagina=" . $pageMax . "&upperLimit=" . $pageMax;
-				$after = home_url($_SERVER['REQUEST_URI']) . "&pagina=" . ($_GET['pagina'] + 1) . "&upperLimit=" . $pageMax;
+				$afterMost = home_url($_SERVER['REQUEST_URI']) . (isset($_GET['pagina']) ? "&" : "?") . "pagina=" . $pageMax . "&upperLimit=" . $pageMax;
+				$after = home_url($_SERVER['REQUEST_URI']) . (isset($_GET['pagina']) ? "&" : "?") . "pagina=" . ($_GET['pagina'] + 1) . "&upperLimit=" . $pageMax;
 			}
 			?>
 			<form action="<?php echo home_url($_SERVER['REQUEST_URI']) . "?pagina=$_GET[pagina]"; ?>">
